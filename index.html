@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e2347">
+<title>CEVYQ Group | Real problems. Real solutions.</title>
+<meta name="description" content="CEVYQ Group builds done for you digital business cards, checked business leads, LinkedIn profiles and simple business tools for small businesses.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CEVYQ Group: Real problems. Real solutions.">
+<meta property="og:description" content="Digital business cards, checked leads, LinkedIn profiles and business tools. Built for you, ready in days.">
+<meta property="og:url" content="https://cevyq.com/">
+<meta property="og:image" content="https://cevyq.com/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="cq-mark.png">
+<link rel="apple-touch-icon" href="cq-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
+<script src="https://cevyq-stats.chris-e41.workers.dev/t.js" data-card="cevyq-home" data-name="CEVYQ home page (cevyq.com)" defer></script>
+<style>
+:root{--navy:#0e2347;--navy2:#16336a;--blue:#2b6cc4;--sky:#4fb0e6;--orange:#f2892b;--gold:#f4bf4f;--ink:#0f1a2e;--muted:#5a6680;--paper:#ffffff;--mist:#eef4fb;--line:#dde6f2;--wa:#25d366}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:Barlow,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:17px;line-height:1.55;color:var(--ink);background:var(--paper)}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+img,svg{display:block}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+.cond{font-family:"Barlow Condensed",Barlow,sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* top bar */
+.bar{position:absolute;top:0;left:0;right:0;z-index:5}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff}
+.brand img{width:44px;height:auto}
+.brand b{font-family:Michroma,sans-serif;font-weight:400;font-size:19px;letter-spacing:4px}
+.brand small{display:block;font-size:10.5px;letter-spacing:3px;opacity:.75;margin-top:2px}
+.bar .talk{display:flex;align-items:center;gap:8px;background:var(--wa);color:#06331a;font-weight:700;font-size:15px;padding:10px 16px;border-radius:999px}
+
+/* hero */
+.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;isolation:isolate;padding:110px 0 70px}
+.ribbons{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.ribbons i{position:absolute;display:block;height:120px;width:160%;left:-30%;transform-origin:center}
+.ribbons i:nth-child(1){top:70%;background:linear-gradient(90deg,var(--blue),var(--sky));transform:rotate(-14deg)}
+.ribbons i:nth-child(2){top:85%;height:46px;background:linear-gradient(90deg,var(--orange),var(--gold));transform:rotate(-14deg)}
+.ribbons i:nth-child(3){top:93%;height:14px;background:#fff;opacity:.85;transform:rotate(-14deg)}
+.hero .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:clamp(58px,9vw,112px);line-height:.86;text-transform:uppercase;letter-spacing:-.5px}
+.hero h1 span{display:block}
+.hero h1 span:last-child{color:var(--gold)}
+.hero p.lead{font-size:clamp(18px,2.2vw,21px);max-width:30ch;margin-top:22px;color:#dce7f7}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:12px;font-weight:700;font-size:17px}
+.btn.wa{background:var(--wa);color:#06331a}
+.btn.line{border:2px solid rgba(255,255,255,.5);color:#fff}
+.btn.navy{background:var(--navy);color:#fff}
+
+/* phone */
+.phonebox{display:flex;flex-direction:column;align-items:center;gap:14px}
+.phone{width:300px;height:610px;border-radius:44px;background:#05080f;padding:12px;box-shadow:0 40px 80px -30px rgba(0,0,0,.7),0 0 0 2px rgba(255,255,255,.08)}
+.screen{position:relative;width:100%;height:100%;border-radius:34px;overflow:hidden;background:#fff;color:var(--ink)}
+.notch{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:92px;height:24px;border-radius:14px;background:#05080f;z-index:3}
+.tabs{display:flex;gap:6px;background:var(--navy2);box-shadow:0 0 0 1px rgba(255,255,255,.1);padding:5px;border-radius:999px}
+.tabs button{padding:8px 14px;border-radius:999px;font-size:14px;font-weight:600;color:#cdd9ee}
+.tabs button[aria-selected=true]{background:#fff;color:var(--navy)}
+.hint{font-size:13.5px;color:#b9c8e2;text-align:center;max-width:30ch}
+
+/* mini card inside phone */
+.mc{position:absolute;inset:0;display:flex;flex-direction:column;opacity:0;transition:opacity .45s;pointer-events:none}
+.mc.on{opacity:1;pointer-events:auto}
+.mc .van{position:relative;background:var(--c1);color:#fff;padding:44px 16px 0;overflow:hidden}
+.mc .row{display:flex;justify-content:space-between;align-items:flex-start}
+.mc .badge{width:46px;height:46px;border-radius:11px;background:var(--acc);color:var(--c1);display:grid;place-items:center}
+.mc .stamp{background:#fff;color:var(--ink);border-radius:10px;padding:5px 9px;text-align:center;transform:rotate(3deg)}
+.mc .stamp b{font-family:"Barlow Condensed",sans-serif;font-size:21px;line-height:1;display:flex;gap:3px;align-items:center;justify-content:center}
+.mc .stamp b svg{color:#f4b400}
+.mc .stamp span{display:block;font-size:9px;font-weight:600;color:var(--muted)}
+.mc h3{font-family:"Barlow Condensed",sans-serif;font-weight:800;text-transform:uppercase;font-size:37px;line-height:.88;margin-top:14px}
+.mc .tr{font-size:13px;font-weight:600;margin-top:6px;opacity:.9}.mc .tr em{font-style:normal;color:var(--acc)}
+.mc .liv{position:relative;height:40px;margin:12px -30px -14px;transform:skewY(-6deg);transform-origin:left}
+.mc .liv i{position:absolute;left:0;right:0}
+.mc .liv i:nth-child(1){top:4px;height:15px;background:var(--acc)}
+.mc .liv i:nth-child(2){top:23px;height:5px;background:#fff;opacity:.9}
+.mc .liv i:nth-child(3){top:32px;height:3px;background:var(--acc);opacity:.6}
+.mc .tel{display:flex;align-items:center;gap:9px;padding:12px 0 15px;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:27px;line-height:1}
+.mc .tel span{width:32px;height:32px;border-radius:50%;background:var(--acc);color:var(--c1);display:grid;place-items:center}
+.mc .acts{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px}
+.mc .acts button{min-height:44px;border-radius:10px;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;gap:6px}
+.mc .acts .w{background:var(--wa);color:#06331a}.mc .acts .c{background:var(--c1);color:#fff}
+.mc .acts .q{grid-column:1/-1;border:2px solid var(--c1);color:var(--c1)}
+.mc .svc{padding:4px 14px}
+.mc .svc div{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:13.5px;font-weight:600}
+.mc .svc i{width:26px;height:26px;border-radius:7px;background:var(--mist);display:grid;place-items:center;color:var(--c1)}
+.tap{position:absolute;left:50%;bottom:18px;transform:translate(-50%,20px);background:var(--ink);color:#fff;font-size:12.5px;font-weight:700;padding:8px 13px;border-radius:999px;opacity:0;transition:.25s;white-space:nowrap;z-index:4}
+.tap.on{opacity:1;transform:translate(-50%,0)}
+
+/* sections */
+section{padding:84px 0}
+.h2{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:clamp(40px,5.5vw,62px);line-height:.95;color:var(--navy);max-width:22ch;text-wrap:balance}
+.sub{font-size:19px;color:var(--muted);max-width:52ch;margin-top:14px}
+.svcnav{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.svcnav button{display:flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;border:2px solid var(--line);font-weight:700;font-size:16px;color:var(--navy);background:#fff}
+.svcnav button svg{color:var(--blue)}
+.svcnav button[aria-selected=true]{background:var(--navy);border-color:var(--navy);color:#fff}
+.svcnav button[aria-selected=true] svg{color:var(--gold)}
+.panel{display:none;grid-template-columns:1fr 1fr;gap:44px;margin-top:30px;align-items:start}
+.panel.on{display:grid}
+.panel h3{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:38px;line-height:1;color:var(--navy)}
+.panel p{margin-top:12px;color:#33405a}
+.ticks{list-style:none;margin-top:18px;display:grid;gap:10px}
+.ticks li{display:flex;gap:11px;align-items:flex-start}
+.ticks li:before{content:"";flex:none;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--orange) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/14px no-repeat}
+.panel .go{margin-top:24px}
+.demo{background:var(--mist);border-radius:20px;padding:24px;min-height:330px}
+.demo .cap{font-size:14px;color:var(--muted);margin-bottom:14px;font-weight:600}
+
+/* feed demo */
+.feed{display:grid;gap:8px}
+.feed div{display:flex;align-items:center;gap:10px;background:#fff;border-radius:12px;padding:11px 13px;font-size:15px;animation:in .4s both}
+.feed time{margin-left:auto;font-size:13px;color:var(--muted)}
+.feed b{font-weight:700}
+.dot{width:10px;height:10px;border-radius:50%;flex:none}
+@keyframes in{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.feedsum{display:flex;gap:10px;margin-top:14px}
+.feedsum div{flex:1;background:var(--navy);color:#fff;border-radius:12px;padding:12px;text-align:center}
+.feedsum b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:32px;line-height:1}
+.feedsum span{font-size:12.5px;opacity:.8}
+
+/* lead flip */
+.lead-card{background:#fff;border-radius:16px;padding:18px;box-shadow:0 1px 0 var(--line)}
+.lead-card .nm{font-weight:700;font-size:18px}
+.lead-card .ad{font-size:14px;color:var(--muted)}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.fields div{background:var(--mist);border-radius:10px;padding:10px}
+.fields span{display:block;font-size:12px;color:var(--muted);font-weight:600}
+.fields b{display:block;font-size:15px;filter:blur(6px);transition:filter .5s;user-select:none}
+.revealed .fields b{filter:none}
+.checked{display:inline-flex;align-items:center;gap:6px;margin-top:14px;background:#e3f6ea;color:#11683a;font-weight:700;font-size:13.5px;padding:6px 11px;border-radius:999px;opacity:0;transition:opacity .4s .4s}
+.revealed .checked{opacity:1}
+.reveal{margin-top:14px;width:100%}
+
+/* before after */
+.switch{display:inline-flex;background:#fff;border-radius:999px;padding:4px;gap:4px;margin-bottom:14px}
+.switch button{padding:8px 16px;border-radius:999px;font-weight:700;font-size:14px;color:var(--muted)}
+.switch button[aria-pressed=true]{background:var(--navy);color:#fff}
+.li{background:#fff;border-radius:16px;overflow:hidden}
+.li .cover{height:62px;background:linear-gradient(110deg,var(--navy) 50%,var(--blue) 50% 75%,var(--orange) 75%)}
+.li.before .cover{background:#c9d1dc}
+.li .body{padding:0 16px 16px}
+.li .av{width:66px;height:66px;border-radius:50%;border:4px solid #fff;margin-top:-33px;background:#9aa6b8;display:grid;place-items:center;color:#fff;font-weight:800;font-size:22px}
+.li:not(.before) .av{background:var(--blue)}
+.li .nm{font-weight:700;font-size:18px;margin-top:6px}
+.li .hl{font-size:15px;color:#33405a;margin-top:2px}
+.li .ab{font-size:14px;color:var(--muted);margin-top:10px}
+.li .stats{display:flex;gap:16px;margin-top:12px;font-size:13.5px;color:var(--muted)}
+.li .stats b{color:var(--ink)}
+
+/* tools */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{padding:10px 14px;border-radius:12px;background:#fff;border:2px solid var(--line);font-weight:700;font-size:14.5px}
+.chips button[aria-pressed=true]{border-color:var(--orange);background:#fff4e8}
+.toolout{margin-top:16px;background:#fff;border-radius:16px;padding:18px;min-height:150px}
+.toolout b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:26px;color:var(--navy);line-height:1.05}
+.toolout p{font-size:15px;color:#33405a;margin-top:8px}
+.toolout .save{display:inline-block;margin-top:10px;font-weight:700;color:#11683a;background:#e3f6ea;padding:5px 11px;border-radius:999px;font-size:13.5px}
+
+/* steps */
+.steps{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.steps .h2{color:#fff}
+.steps ol{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;counter-reset:s}
+.steps li{counter-increment:s;background:var(--navy2);border-radius:18px;padding:24px;position:relative}
+.steps li:before{content:counter(s);font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:64px;line-height:.8;color:var(--gold);display:block;margin-bottom:12px}
+.steps li b{display:block;font-size:20px}
+.steps li p{color:#c9d6ec;margin-top:6px;font-size:16px}
+
+/* contact */
+.contact{text-align:center}
+.contact .h2{margin:0 auto;max-width:18ch}
+.contact .sub{margin:14px auto 0}
+.contact .ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:30px}
+.contact .small{margin-top:22px;font-size:15px;color:var(--muted)}
+.contact .small a{font-weight:700;color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+footer .brand{color:var(--navy)}
+footer .brand b{font-size:15px}
+
+@media (prefers-reduced-motion:no-preference){
+ .ribbons i{animation:sweep 1.1s cubic-bezier(.2,.8,.2,1) both}
+ .ribbons i:nth-child(2){animation-delay:.12s}.ribbons i:nth-child(3){animation-delay:.24s}
+}
+@keyframes sweep{from{translate:-100% 0}to{translate:0 0}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+@media (max-width:900px){
+ .hero{padding:96px 0 56px}
+ .hero .grid{grid-template-columns:1fr}
+ .panel{grid-template-columns:1fr;gap:24px}
+ .steps ol{grid-template-columns:1fr}
+ .ribbons i:nth-child(1){top:60%}.ribbons i:nth-child(2){top:70%}.ribbons i:nth-child(3){top:76%}
+}
+@media (max-width:420px){
+ body{font-size:16.5px}
+ .bar .talk span{display:none}
+ .phone{width:280px;height:570px}
+ .svcnav button{flex:1 1 calc(50% - 10px);justify-content:center;padding:12px 8px;font-size:15px}
+ .fields{grid-template-columns:1fr}
+ section{padding:64px 0}
+}
+</style>
+</head>
+<body>
+
+<header class="bar"><div class="wrap">
+  <a class="brand" href="#top" aria-label="CEVYQ Group home"><img src="cq-mark.png" alt=""><span><b>CEVYQ</b><small>GROUP</small></span></a>
+  <a class="talk" data-t="whatsapp" target="_blank" rel="noopener" href="https://wa.me/66631101888?text=Hi%20Chris%2C%20I%20found%20CEVYQ%20online."><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-4.7A8.5 8.5 0 1 1 20.5 11.6z"/></svg><span>WhatsApp us</span></a>
+</div></header>
+
+<main id="top">
+<div class="hero">
+  <div class="ribbons" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap grid">
+    <div>
+      <h1><span>Real problems.</span><span>Real solutions.</span></h1>
+      <p class="lead">We build the tools that bring small businesses more work. Digital business cards, checked leads, LinkedIn profiles and simple business software. Done for you.</p>
+      <div class="ctas">
+        <a class="btn wa" data-t="whatsapp" target="_blank" rel="noopener" href="https://wa.me/66631101888?text=Hi%20Chris%2C%20I%20found%20CEVYQ%20online."><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-4.7A8.5 8.5 0 1 1 20.5 11.6z"/></svg>Talk to us on WhatsApp</a>
+        <a class="btn line" href="#services">See what we do</a>
+      </div>
+    </div>
+    <div class="phonebox">
+      <div class="tabs" role="tablist" aria-label="Example cards">
+        <button role="tab" aria-selected="true" data-card="0">Electrician</button>
+        <button role="tab" aria-selected="false" data-card="1">Mechanic</button>
+        <button role="tab" aria-selected="false" data-card="2">Plumber</button>
+      </div>
+      <div class="phone"><div class="screen" id="screen"><div class="notch"></div><div class="tap" id="tap" role="status"></div></div></div>
+      <p class="hint">A real digital card. Tap the buttons. Every tap is counted for the owner.</p>
+    </div>
+  </div>
+</div>
+
+<section id="services"><div class="wrap">
+  <h2 class="h2">What we build for you</h2>
+  <p class="sub">Four things, done properly. Pick one to see it work.</p>
+  <div class="svcnav" role="tablist" aria-label="Services">
+    <button role="tab" aria-selected="true" data-p="cards"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>Digital cards</button>
+    <button role="tab" aria-selected="false" data-p="leads"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg>Business leads</button>
+    <button role="tab" aria-selected="false" data-p="li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3.5"/><path d="M8 10.5V17M8 7.3v.2M12 17v-6.5M12 13.5a2.5 2.5 0 0 1 5 0V17"/></svg>LinkedIn profiles</button>
+    <button role="tab" aria-selected="false" data-p="tools"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.3 5.3L3.5 17.5l3 3 5.9-5.9a4 4 0 0 0 5.3-5.3l-2.5 2.5-2.6-.4-.4-2.6z"/></svg>Business tools</button>
+  </div>
+
+  <div class="panel on" id="p-cards" role="tabpanel">
+    <div>
+      <h3>Your business card, on every phone</h3>
+      <p>One link your customers keep. They call, WhatsApp, ask for a quote, save your number or leave a Google review in one tap. No app, no monthly fees.</p>
+      <ul class="ticks">
+        <li>Built with your logo, colours and real services</li>
+        <li>Ready to share within a day</li>
+        <li>A QR code for your van, invoices and flyers</li>
+        <li>A monthly report of who tapped what</li>
+      </ul>
+      <a class="btn navy go" data-t="cards_ask" target="_blank" rel="noopener" href="https://wa.me/66631101888?text=Hi%20Chris%2C%20I%27d%20like%20a%20digital%20card%20for%20my%20business.">Get my card made</a>
+    </div>
+    <div class="demo">
+      <div class="cap">What a card owner sees (example)</div>
+      <div class="feed" id="feed"></div>
+      <div class="feedsum"><div><b id="fOpen">0</b><span>Card opens</span></div><div><b id="fEnq">0</b><span>Calls and messages</span></div><div><b id="fRev">0</b><span>Review taps</span></div></div>
+    </div>
+  </div>
+
+  <div class="panel" id="p-leads" role="tabpanel">
+    <div>
+      <h3>Leads checked by a person, not a robot</h3>
+      <p>Most lead lists are full of dead numbers and closed businesses. Ours are built for your exact trade and area, then checked by hand before you get them.</p>
+      <ul class="ticks">
+        <li>Owner names and direct mobile numbers where we can find them</li>
+        <li>Google rating, reviews and website problems</li>
+        <li>Only open, trading businesses</li>
+        <li>Delivered as a clean spreadsheet</li>
+      </ul>
+      <a class="btn navy go" data-t="leads_ask" target="_blank" rel="noopener" href="https://wa.me/66631101888?text=Hi%20Chris%2C%20I%27m%20interested%20in%20business%20leads.">Ask for a free sample</a>
+    </div>
+    <div class="demo">
+      <div class="cap">A sample lead (made up business)</div>
+      <div class="lead-card" id="leadCard">
+        <div class="nm">Northgate Roofing Ltd</div>
+        <div class="ad">Roofer in Manchester, UK</div>
+        <div class="fields">
+          <div><span>Owner</span><b>Daniel Hartley</b></div>
+          <div><span>Direct mobile</span><b>07700 900 418</b></div>
+          <div><span>Google rating</span><b>4.9 from 112 reviews</b></div>
+          <div><span>Website</span><b>No mobile version</b></div>
+        </div>
+        <span class="checked"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Checked by hand</span>
+      </div>
+      <button class="btn navy reveal" id="reveal" data-t="lead_reveal">Show what you get</button>
+    </div>
+  </div>
+
+  <div class="panel" id="p-li" role="tabpanel">
+    <div>
+      <h3>A LinkedIn profile that brings in work</h3>
+      <p>Buyers check you out before they reply. We rewrite your headline, about section and banner so they understand what you do and why to pick you, in seconds.</p>
+      <ul class="ticks">
+        <li>A clear headline that says who you help</li>
+        <li>An about section written in your voice</li>
+        <li>A matching banner and a tidy profile</li>
+      </ul>
+      <a class="btn navy go" data-t="li_ask" target="_blank" rel="noopener" href="https://wa.me/66631101888?text=Hi%20Chris%2C%20I%27d%20like%20my%20LinkedIn%20profile%20improved.">Fix my profile</a>
+    </div>
+    <div class="demo">
+      <div class="cap">Example profile</div>
+      <div class="switch" role="group" aria-label="Before or after"><button aria-pressed="true" data-v="before">Before</button><button aria-pressed="false" data-v="after">After</button></div>
+      <div class="li before" id="li">
+        <div class="cover"></div>
+        <div class="body">
+          <div class="av">SM</div>
+          <div class="nm">Sarah Mitchell</div>
+          <div class="hl" id="liHl">Director at SM Facilities Ltd</div>
+          <div class="ab" id="liAb">Experienced professional. Passionate about business. Open to opportunities.</div>
+          <div class="stats"><span><b id="liV">12</b> profile views this week</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" id="p-tools" role="tabpanel">
+    <div>
+      <h3>Simple tools that give you your evenings back</h3>
+      <p>If you do the same job over and over in a notebook or spreadsheet, we can turn it into a small tool that does it for you. Built for how you already work.</p>
+      <ul class="ticks">
+        <li>Made for your business, not a big generic system</li>
+        <li>Works on your laptop or phone</li>
+        <li>Yours to keep, no ongoing licence</li>
+      </ul>
+      <a class="btn navy go" data-t="tools_ask" target="_blank" rel="noopener" href="https://wa.me/66631101888?text=Hi%20Chris%2C%20I%20have%20a%20job%20I%27d%20like%20a%20tool%20for.">Tell us what slows you down</a>
+    </div>
+    <div class="demo">
+      <div class="cap">What eats your time?</div>
+      <div class="chips" id="chips">
+        <button aria-pressed="true" data-k="quotes">Writing quotes</button>
+        <button aria-pressed="false" data-k="money">Tracking money</button>
+        <button aria-pressed="false" data-k="admin">Client admin</button>
+        <button aria-pressed="false" data-k="stock">Stock and suppliers</button>
+      </div>
+      <div class="toolout" id="toolout"></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="steps"><div class="wrap">
+  <h2 class="h2">How it works</h2>
+  <ol>
+    <li><b>Message us on WhatsApp</b><p>Tell us about your business and what you need. No forms, no sales call marathon.</p></li>
+    <li><b>We build it for you</b><p>We use your real details, logo and colours. You see it before you pay a cent.</p></li>
+    <li><b>You start using it</b><p>Share it, use it, and ask for changes any time. We stay a message away.</p></li>
+  </ol>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <h2 class="h2">Got a problem worth solving?</h2>
+  <p class="sub">Tell us what is costing you time or customers. We will tell you honestly if we can fix it.</p>
+  <div class="ctas">
+    <a class="btn wa" data-t="whatsapp" target="_blank" rel="noopener" href="https://wa.me/66631101888?text=Hi%20Chris%2C%20I%20found%20CEVYQ%20online."><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-4.7A8.5 8.5 0 1 1 20.5 11.6z"/></svg>WhatsApp Chris</a>
+    <a class="btn navy" href="mailto:chris@cevyq.com"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>chris@cevyq.com</a>
+  </div>
+  <p class="small">Want our details on your phone? <a href="https://card.cevyq.com" target="_blank" rel="noopener">Open our digital card</a></p>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span class="brand"><img src="cq-mark.png" alt="" width="30"><b style="font-family:Michroma,sans-serif;font-weight:400;letter-spacing:3px">CEVYQ</b></span>
+  <span>CEVYQ Group, Business &amp; Technology Solutions</span>
+</div></footer>
+
+<script>
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const I = {
+  phone:'<path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/>',
+  wa:'<path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-4.7A8.5 8.5 0 1 1 20.5 11.6z"/>',
+  bolt:'<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',
+  wrench:'<path d="M14.7 6.3a4 4 0 0 0-5.3 5.3L3.5 17.5l3 3 5.9-5.9a4 4 0 0 0 5.3-5.3l-2.5 2.5-2.6-.4-.4-2.6z"/>',
+  drop:'<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>',
+  star:'<path fill="currentColor" d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>',
+  check:'<path d="M5 12.5l4.5 4.5L19 7.5"/>'
+};
+const sv = (n,s=18,w=2.2) => '<svg width="'+s+'" height="'+s+'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="'+w+'" stroke-linecap="round" stroke-linejoin="round">'+I[n]+'</svg>';
+
+// Example cards: made up businesses
+const CARDS = [
+  {n:'Brightwire Electrical', t:'Electrician', c:'Leeds', tel:'07700 900 112', r:'5.0', rv:'84', ic:'bolt', c1:'#13224a', acc:'#ffd23f', s:['Fault finding','Rewires and new sockets','EV chargers','Safety certificates']},
+  {n:'Torque Mobile Mechanics', t:'Mobile mechanic', c:'Bristol', tel:'07700 900 457', r:'4.9', rv:'131', ic:'wrench', c1:'#2a1414', acc:'#ff5a36', s:['Servicing at your door','Brakes and clutches','Diagnostics','MOT prep']},
+  {n:'Harbour Plumbing', t:'Plumber', c:'Sydney', tel:'0491 570 156', r:'5.0', rv:'57', ic:'drop', c1:'#0c2e33', acc:'#2fd1c5', s:['Blocked drains','Hot water systems','Leak detection','Bathroom installs']}
+];
+const screen = $('#screen');
+CARDS.forEach((d,i) => {
+  const el = document.createElement('div'); el.className = 'mc'+(i===0?' on':''); el.style.setProperty('--c1',d.c1); el.style.setProperty('--acc',d.acc);
+  el.innerHTML = '<div class="van"><div class="row"><div class="badge">'+sv(d.ic,24,2.4)+'</div><div class="stamp"><b>'+sv('star',14,1)+d.r+'</b><span>'+d.rv+' Google reviews</span></div></div>'+
+    '<h3>'+d.n+'</h3><div class="tr">'+d.t+' in <em>'+d.c+'</em></div><div class="liv"><i></i><i></i><i></i></div>'+
+    '<div class="tel"><span>'+sv('phone',16,2.4)+'</span>'+d.tel+'</div></div>'+
+    '<div class="acts"><button class="w" data-say="WhatsApp tapped">'+sv('wa',16)+'WhatsApp</button><button class="c" data-say="Call tapped">'+sv('phone',15)+'Call now</button><button class="q" data-say="Quote request started">Get a free quote</button></div>'+
+    '<div class="svc">'+d.s.map(x=>'<div><i>'+sv('check',14,3)+'</i>'+x+'</div>').join('')+'</div>';
+  screen.appendChild(el);
+});
+let cur = 0, timer = null, tapT = null;
+const show = i => { cur = i; $$('.mc').forEach((m,k)=>m.classList.toggle('on',k===i)); $$('.tabs button').forEach((b,k)=>b.setAttribute('aria-selected',k===i)); };
+const auto = () => { clearInterval(timer); timer = setInterval(()=>show((cur+1)%CARDS.length), 4500); };
+$$('.tabs button').forEach(b => b.onclick = () => { show(+b.dataset.card); auto(); });
+screen.addEventListener('click', e => {
+  const b = e.target.closest('[data-say]'); if (!b) return;
+  const t = $('#tap'); t.textContent = '✓ '+b.dataset.say+'. Counted for the owner'; t.classList.add('on');
+  clearTimeout(tapT); tapT = setTimeout(()=>t.classList.remove('on'), 1800); auto();
+});
+auto();
+
+// Service switcher
+$$('.svcnav button').forEach(b => b.onclick = () => {
+  $$('.svcnav button').forEach(x=>x.setAttribute('aria-selected', x===b));
+  $$('.panel').forEach(p=>p.classList.toggle('on', p.id==='p-'+b.dataset.p));
+});
+
+// Card activity feed (sample)
+const EV = [['Card opened','#8fa3c4'],['WhatsApp tapped','#25d366'],['Call tapped','#2b6cc4'],['Saved your number','#f2892b'],['Card opened','#8fa3c4'],['Review us on Google tapped','#f4b400'],['Quote request sent','#25d366'],['Card opened','#8fa3c4'],['Directions tapped','#2b6cc4']];
+const PLACE = ['Leeds','Bradford','Wakefield','Harrogate','York'];
+let ei = 0, cnt = {o:0,e:0,r:0};
+const feed = $('#feed');
+const pushEv = () => {
+  const [txt,col] = EV[ei % EV.length]; ei++;
+  if (/opened/.test(txt)) cnt.o++; else if (/Review/.test(txt)) cnt.r++; else if (/WhatsApp|Call|Quote/.test(txt)) cnt.e++;
+  const d = document.createElement('div');
+  d.innerHTML = '<span class="dot" style="background:'+col+'"></span><b>'+txt+'</b><span style="color:var(--muted);font-size:14px">'+PLACE[ei%PLACE.length]+'</span><time>just now</time>';
+  feed.prepend(d); [...feed.children].slice(5).forEach(x=>x.remove());
+  [...feed.children].slice(1).forEach((x,k)=>x.querySelector('time').textContent=(k+1)*7+' min ago');
+  $('#fOpen').textContent = 23+cnt.o; $('#fEnq').textContent = 6+cnt.e; $('#fRev').textContent = 2+cnt.r;
+};
+for (let k=0;k<4;k++) pushEv();
+setInterval(()=>{ if ($('#p-cards').classList.contains('on') && document.visibilityState==='visible') pushEv(); }, 2600);
+
+// Lead reveal
+$('#reveal').onclick = () => { const c = $('#leadCard'); const on = !c.classList.contains('revealed'); c.classList.toggle('revealed', on); $('#reveal').textContent = on ? 'Hide details' : 'Show what you get'; };
+
+// LinkedIn before and after
+const LI = {
+  before:{hl:'Director at SM Facilities Ltd', ab:'Experienced professional. Passionate about business. Open to opportunities.', v:12},
+  after:{hl:'Office cleaning for Leeds firms that are tired of chasing their cleaners', ab:'Twelve years keeping offices spotless across West Yorkshire. Fixed weekly price, the same team every visit, and I answer my own phone. Message me for a free walk round.', v:87}
+};
+$$('.switch button').forEach(b => b.onclick = () => {
+  const v = b.dataset.v; $$('.switch button').forEach(x=>x.setAttribute('aria-pressed', x===b));
+  $('#li').classList.toggle('before', v==='before'); $('#liHl').textContent = LI[v].hl; $('#liAb').textContent = LI[v].ab; $('#liV').textContent = LI[v].v;
+});
+
+// Tools
+const TOOLS = {
+  quotes:['A quote builder','Pick the job, the size and the extras. It works out the price and sends a neat quote to the customer on WhatsApp or email.','Quotes in minutes, not evenings'],
+  money:['A money tracker','Every payment in and out, in every currency you use, with what you are owed and what you owe on one screen.','No more month end panic'],
+  admin:['A client admin desk','Client details, documents and deadlines in one place, with reminders before anything is due.','Nothing slips through the cracks'],
+  stock:['A stock and supplier list','What you have, what is running low and who to order from, with prices you can compare at a glance.','Order once, not three times']
+};
+const tool = k => { const [t,p,s] = TOOLS[k]; $('#toolout').innerHTML = '<b>'+t+'</b><p>'+p+'</p><span class="save">'+s+'</span>'; };
+$$('#chips button').forEach(b => b.onclick = () => { $$('#chips button').forEach(x=>x.setAttribute('aria-pressed', x===b)); tool(b.dataset.k); });
+tool('quotes');
+</script>
+</body>
+</html>
