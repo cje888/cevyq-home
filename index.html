@@ -51,7 +51,7 @@ img,svg{display:block}
 .hero:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(70% 75% at 78% 45%,color-mix(in srgb,var(--g1) 50%,transparent),transparent 72%),radial-gradient(40% 40% at 95% 90%,color-mix(in srgb,var(--g2) 22%,transparent),transparent 70%)}
 .hero[data-theme=leads]{--g1:#16a058;--g2:#b8e35a;--acc:#5fe08f}
 .hero[data-theme=linkedin]{--g1:#0a66c2;--g2:#70b5f9;--acc:#70b5f9}
-.hero[data-theme=tools]{--g1:#7c5cff;--g2:#f28a2c;--acc:#ffb057}
+.hero[data-theme=tools]{--g1:#4b4fd8;--g2:#2dd4bf;--acc:#8ea0ff}
 .hero .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center;width:100%}
 .ask{font-size:clamp(34px,4.3vw,58px);line-height:1.04;font-weight:600}
 .problems{margin-top:26px;display:grid;gap:4px;max-width:520px}
@@ -132,45 +132,75 @@ img,svg{display:block}
 .sheet .ft{padding:12px 16px;font-size:12.5px;color:#66708a;font-weight:700;display:flex;justify-content:space-between}
 
 /* linkedin scene */
-.li{width:min(470px,100%);background:#fff;color:var(--ink);border-radius:20px;overflow:hidden;box-shadow:0 50px 90px -30px rgba(0,0,0,.8);transform:rotate(-2deg)}
-.li .lbar{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid #e6e9ef}
-.li .lbar i{width:28px;height:28px;border-radius:5px;background:#0a66c2;color:#fff;font:700 19px Arial,sans-serif;display:grid;place-items:center;font-style:normal;padding-bottom:2px}
-.li .lbar span{flex:1;height:28px;border-radius:5px;background:#eef3f8;color:#5e6d81;font-size:12.5px;display:flex;align-items:center;padding:0 10px}
-.li .cv{height:90px;background:#c8d0dc;transition:background .6s}
-.li.after .cv{background:linear-gradient(120deg,#004182,#0a66c2 55%,#70b5f9)}
-.li .lbtns{display:flex;gap:8px;margin-top:12px}
-.li .lbtns b{padding:7px 16px;border-radius:999px;font-size:13.5px;font-weight:700}
-.li .lbtns .c{background:#0a66c2;color:#fff}.li .lbtns .m{border:1.5px solid #0a66c2;color:#0a66c2}
-.li .bd{padding:0 22px 22px}
-.li .av{width:84px;height:84px;border-radius:50%;border:5px solid #fff;margin-top:-42px;background:#9aa6b8;display:grid;place-items:center;color:#fff;font-weight:800;font-size:26px;transition:background .6s}
-.li.after .av{background:#0a66c2}
-.li .nm{font-weight:800;font-size:20px;margin-top:8px}
-.li .hl{font-size:15px;color:#33405a;margin-top:2px;min-height:46px}
-.li .ab{font-size:14px;color:#66708a;margin-top:10px;min-height:88px}
-.li .vw{margin-top:12px;display:flex;align-items:center;gap:10px;font-size:14px;color:#66708a}
-.li .vw b{font-family:Unbounded,sans-serif;font-size:24px;color:var(--ink);font-weight:600}
-.typing:after{content:"";display:inline-block;width:2px;height:1em;background:#2f7be0;margin-left:2px;vertical-align:-2px;animation:blink 1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
+.lw{position:relative;width:min(470px,100%);height:536px;transform:rotate(-1.5deg)}
+.lp{position:absolute;inset:0;background:#fff;color:#191919;border-radius:16px;overflow:hidden;box-shadow:0 50px 90px -30px rgba(0,0,0,.85);font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.lp.after{opacity:0;filter:blur(8px);transform:scale(1.02);transition:opacity 2.6s ease,filter 2.6s ease,transform 2.6s ease}
+.lw.fresh .lp.after{opacity:1;filter:none;transform:none}
+.lw.fresh .lp.before{opacity:.0;transition:opacity 2.6s ease}
+.lp .lbar{display:flex;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid #e8e8e8}
+.lp .lbar i{width:26px;height:26px;border-radius:4px;background:#0a66c2;color:#fff;font:700 18px Arial,sans-serif;display:grid;place-items:center;font-style:normal;padding-bottom:2px}
+.lp .lbar span{flex:1;height:26px;border-radius:4px;background:#edf3f8;color:#666;font-size:12px;display:flex;align-items:center;padding:0 10px}
+.lp .cv{height:92px;position:relative}
+.lp.before .cv{background:#a0b4b7}
+.lp.after .cv{background:linear-gradient(115deg,#0e2347 0%,#0a66c2 58%,#3fa2f2 100%);color:#fff;padding:16px 18px 0 140px}
+.lp.after .cv b{display:block;font-size:16px;line-height:1.2;font-weight:800}
+.lp.after .cv small{display:block;font-size:11.5px;opacity:.85;margin-top:4px}
+.lp .pic{position:absolute;left:16px;top:44px;width:104px;height:104px;border-radius:50%;border:4px solid #fff;overflow:hidden;background:#d6d6d6}
+.lp.after .pic{box-shadow:0 0 0 3px #0a66c2}
+.lp .bd{padding:60px 18px 14px}
+.lp .nm{font-size:21px;font-weight:700;display:flex;align-items:center;gap:6px}
+.lp .vf{width:16px;height:16px;color:#0a66c2}
+.lp .hl{font-size:14px;line-height:1.35;margin-top:3px}
+.lp .loc{font-size:12.5px;color:#666;margin-top:6px}
+.lp .net{font-size:12.5px;color:#0a66c2;font-weight:700;margin-top:4px}
+.lp .lb{display:flex;gap:7px;margin-top:10px}
+.lp .lb span{padding:6px 15px;border-radius:999px;font-size:13px;font-weight:700}
+.lp .lb .c{background:#0a66c2;color:#fff}.lp .lb .m{border:1.5px solid #0a66c2;color:#0a66c2}
+.lp.before .lb .c{background:#8c8c8c}.lp.before .lb .m{border-color:#8c8c8c;color:#8c8c8c}
+.lp .sec{margin-top:10px;padding-top:9px;border-top:1px solid #ebebeb}
+.lp .sec h6{font-size:14.5px;font-weight:700;margin-bottom:6px}
+.lp .sec p{font-size:12.8px;color:#444;line-height:1.45}
+.lp .feat{display:flex;gap:10px;align-items:center;border:1px solid #e3e3e3;border-radius:10px;padding:8px}
+.lp .feat i{width:46px;height:46px;border-radius:8px;background:linear-gradient(135deg,#0a66c2,#3fa2f2);flex:none}
+.lp .feat b{font-size:12.8px;display:block}.lp .feat span{font-size:11.5px;color:#666}
+.lp .sk{display:flex;flex-wrap:wrap;gap:6px}
+.lp .sk span{font-size:11.5px;font-weight:700;padding:4px 9px;border-radius:999px;background:#eef3f8;color:#0a4a8f}
+.lp .stat{display:flex;gap:16px;margin-top:10px;padding-top:9px;border-top:1px solid #ebebeb}
+.lp .stat div{font-size:12px;color:#666}.lp .stat b{display:block;font-family:Unbounded,sans-serif;font-size:19px;color:#191919;font-weight:600}
+.lp.before .muted{color:#9a9a9a;font-style:italic}
 
-/* tool scene */
-.tool{width:min(480px,100%);background:#fff;color:var(--ink);border-radius:20px;box-shadow:0 50px 90px -30px rgba(0,0,0,.8);padding:22px;transform:rotate(1.5deg)}
-.tool h5{font-family:Unbounded,sans-serif;font-size:18px;font-weight:600}
-.tool .sub{font-size:13px;color:#66708a;margin-top:2px}
-.tool .opts{display:grid;gap:8px;margin-top:16px}
-.tool .op{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-radius:12px;border:1.5px solid #e2e8f2;font-weight:700;font-size:14.5px;transition:.3s}
-.tool .op.on{border-color:var(--orange);background:#fff5ea}
-.tool .op em{font-style:normal;color:#66708a;font-weight:600}
-.tool .tot{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:14px;border-top:2px dashed #e2e8f2}
-.tool .tot b{font-family:Unbounded,sans-serif;font-size:30px;font-weight:600}
-.tool .send{margin-top:14px;width:100%;min-height:50px;border-radius:12px;background:var(--wa);color:#04331a;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px}
-.tool .sent{text-align:center;font-weight:800;color:#11683a;margin-top:10px;opacity:0;transition:.3s}
-.tool .sent.on{opacity:1}
-
-.tag{position:absolute;left:-1%;top:3%;z-index:2;width:64px;height:64px;border-radius:18px;display:grid;place-items:center;color:#fff;box-shadow:0 20px 40px -14px rgba(0,0,0,.6);transform:rotate(-8deg);animation:bob 6s ease-in-out infinite}
+.tag{position:absolute;left:-1%;top:3%;z-index:3;width:64px;height:64px;border-radius:18px;display:grid;place-items:center;color:#fff;box-shadow:0 20px 40px -14px rgba(0,0,0,.6);transform:rotate(-8deg);animation:bob 6s ease-in-out infinite}
 .tag.cards{background:linear-gradient(135deg,#2f7be0,#f28a2c)}
 .tag.leads{background:#1d8a4f}
 .tag.linkedin{background:#0a66c2;font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:34px;letter-spacing:-1px;padding-bottom:4px}
-.tag.tools{background:linear-gradient(135deg,#7c5cff,#f28a2c)}
+.tag.tools{background:linear-gradient(135deg,#4b4fd8,#2dd4bf)}
+/* app scene (MAA) */
+.app{width:min(560px,100%);background:#f7f8fc;color:var(--ink);border-radius:14px;overflow:hidden;box-shadow:0 50px 90px -30px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.08)}
+.app .tb{display:flex;align-items:center;gap:8px;height:38px;padding:0 14px;background:#e9ecf4;border-bottom:1px solid #dde2ec;font-size:12.5px;font-weight:700;color:#4a5570}
+.app .tb i{width:11px;height:11px;border-radius:50%;background:#ff5f57}.app .tb i+i{background:#febc2e}.app .tb i+i+i{background:#28c840}
+.app .tb span{margin-left:10px}
+.app .bd{display:grid;grid-template-columns:168px 1fr;min-height:330px}
+.app .side{background:#fff;border-right:1px solid #e6e9f2;padding:12px 10px}
+.app .side b{display:block;font-size:11px;color:#8a93a8;font-weight:800;margin:4px 6px 8px}
+.app .cl{display:flex;align-items:center;gap:8px;padding:7px 6px;border-radius:8px;font-size:12.5px;font-weight:700;white-space:nowrap}
+.app .cl em{width:8px;height:8px;border-radius:50%;flex:none;font-style:normal}
+.app .cl.sel{background:#eef0ff;color:#3f44c8}
+.app .main{padding:12px 14px}
+.app .mh{display:flex;justify-content:space-between;align-items:center;font-weight:800;font-size:14px}
+.app .due{font-size:11.5px;font-weight:800;padding:4px 9px;border-radius:999px;background:#fff1e0;color:#b45a00}
+.app .cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:10px}
+.app .cal span{font-size:10px;font-weight:800;color:#8a93a8;text-align:center}
+.app .d{height:38px;border-radius:7px;background:#fff;border:1px solid #e9ecf3;font-size:10.5px;font-weight:700;color:#8a93a8;padding:3px 4px;position:relative}
+.app .d.today{border-color:#4b4fd8;color:#4b4fd8}
+.app .chip{position:absolute;left:3px;right:3px;bottom:3px;height:14px;border-radius:4px;font-size:9.5px;font-weight:800;text-align:center;line-height:13px;color:#fff;padding:0 4px;overflow:hidden;white-space:nowrap;opacity:0;transform:scale(.8);transition:.35s}
+.app .chip.on{opacity:1;transform:none}
+.app .chip.vat{background:#4b4fd8}.app .chip.tax{background:#e8862a}.app .chip.emp{background:#14a38b}
+.app .chip.ok{background:#22a35a!important}
+.app .ft{display:flex;gap:10px;margin-top:12px}
+.app .ft div{flex:1;background:#fff;border:1px solid #e9ecf3;border-radius:10px;padding:8px 10px}
+.app .ft b{display:block;font-family:Unbounded,sans-serif;font-size:18px;font-weight:600}
+.app .ft span{font-size:11px;color:#8a93a8;font-weight:700}
+
 .note{position:absolute;bottom:-4px;left:0;right:0;text-align:center;font-size:12.5px;color:#7f90b0}
 
 /* sections */
@@ -205,6 +235,10 @@ footer .brand b{font-size:14px;color:#cfd9ec}
  section{padding:80px 0}
 }
 @media (max-width:440px){
+ .lw{height:520px}.lp .loc{display:none}.lp .lbar{padding:7px 12px}.lp .cv{height:80px}.lp.after .cv{padding:12px 12px 0 118px}.lp.after .cv b{font-size:13.5px}.lp.after .cv small{font-size:10.5px}
+ .lp .pic{width:88px;height:88px;top:36px}.lp .pic svg{width:88px;height:88px}.lp .bd{padding:52px 14px 12px}.lp .nm{font-size:18px}.lp .hl{font-size:13px}.lp .sec p{font-size:12px}
+ .app .bd{grid-template-columns:1fr}.app .side{display:none}.app .main{padding:10px}.app .d{height:40px}.app .chip{font-size:8.5px}.app .due{font-size:10.5px}
+
  body{font-size:16.5px}
  .pill span{display:none}
  .phone{width:262px;height:540px}
@@ -265,22 +299,66 @@ footer .brand b{font-size:14px;color:#cfd9ec}
 
     <div class="scene" data-s="2">
       <div class="tag linkedin">in</div>
-      <div class="li" id="li"><div class="lbar"><i>in</i><span>Search</span></div><div class="cv"></div><div class="bd">
-        <div class="av">SM</div><div class="nm">Sarah Mitchell</div>
-        <div class="hl" id="liHl"></div><div class="ab" id="liAb"></div>
-        <div class="lbtns"><b class="c">Connect</b><b class="m">Message</b></div>
-        <div class="vw"><b id="liV">12</b>profile views this week</div>
-      </div></div>
+      <div class="lw" id="lw">
+        <div class="lp before">
+          <div class="lbar"><i>in</i><span>Search</span></div>
+          <div class="cv"><div class="pic"><svg viewBox="0 0 112 112" width="104" height="104"><rect width="104" height="104" fill="#d6d6d6"/><circle cx="56" cy="44" r="22" fill="#a8a8a8"/><path d="M14 112c4-26 22-40 42-40s38 14 42 40z" fill="#a8a8a8"/></svg></div></div>
+          <div class="bd">
+            <div class="nm">Sarah Mitchell</div>
+            <div class="hl">Director at SM Facilities Ltd</div>
+            <div class="loc">United Kingdom</div>
+            <div class="net" style="color:#666">43 connections</div>
+            <div class="lb"><span class="c">Connect</span><span class="m">Message</span></div>
+            <div class="sec"><h6>About</h6><p class="muted">Experienced professional. Passionate about business.</p></div>
+            <div class="sec"><h6>Activity</h6><p class="muted">Sarah hasn't posted yet</p></div>
+            <div class="stat"><div><b>12</b>profile views</div><div><b>0</b>search appearances</div></div>
+          </div>
+        </div>
+        <div class="lp after">
+          <div class="lbar"><i>in</i><span>Search</span></div>
+          <div class="cv"><b>Spotless offices across Leeds</b><small>Same team every visit. Free walk round.</small><div class="pic"><svg viewBox="0 0 112 112" width="104" height="104"><defs><linearGradient id="bgp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#cfe3f6"/><stop offset="1" stop-color="#8fb9e6"/></linearGradient></defs><rect width="104" height="104" fill="url(#bgp)"/>
+<path d="M18 112c3-22 18-34 38-34s35 12 38 34z" fill="#14244f"/><path d="M47 78l9 14 9-14z" fill="#fff"/><path d="M53 84l3 18 3-18-3-3z" fill="#0a66c2"/>
+<rect x="48" y="62" width="16" height="18" rx="6" fill="#d9a07d"/>
+<path d="M33 44c0-17 10-27 23-27s23 10 23 27c0 4-1 9-3 13l-3-14c-6-1-14-5-18-11-4 7-12 11-19 12l-2 13c-1-4-1-9-1-13z" fill="#3b2418"/>
+<ellipse cx="56" cy="48" rx="16" ry="19" fill="#e6b08b"/>
+<path d="M39 41c5 0 13-3 17-10 4 7 12 10 17 10 0-9-7-17-17-17s-17 8-17 17z" fill="#3b2418"/>
+<circle cx="50" cy="48" r="1.9" fill="#2b1a12"/><circle cx="62" cy="48" r="1.9" fill="#2b1a12"/>
+<path d="M50 57c3 3 9 3 12 0" stroke="#a5583c" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div></div>
+          <div class="bd">
+            <div class="nm">Sarah Mitchell <svg class="vf" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 2.2 3.2-.4.9 3.1 2.8 1.6-1 3 1 3-2.8 1.6-.9 3.1-3.2-.4L12 22l-2.4-2.2-3.2.4-.9-3.1-2.8-1.6 1-3-1-3 2.8-1.6.9-3.1 3.2.4z"/><path d="M8 12l3 3 5-6" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="hl">Office cleaning for Leeds firms tired of chasing their cleaners | Fixed weekly price | Same team every visit</div>
+            <div class="loc">Leeds, West Yorkshire</div>
+            <div class="net">1,240 followers &nbsp; 500+ connections</div>
+            <div class="lb"><span class="c">Connect</span><span class="m">Message</span></div>
+            <div class="sec"><h6>About</h6><p>Leeds firms switch to us when they are tired of chasing cleaners. Same team, fixed price, free walk round.</p></div>
+            <div class="stat"><div><b id="lv">12</b>profile views</div><div><b id="ls">0</b>search appearances</div></div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="scene" data-s="3">
-      <div class="tag tools"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.3 5.3L3.5 17.5l3 3 5.9-5.9a4 4 0 0 0 5.3-5.3l-2.5 2.5-2.6-.4-.4-2.6z"/></svg></div>
-      <div class="tool"><h5>Quick quote</h5><div class="sub">Built for a cleaning company. Example.</div>
-        <div class="opts" id="opts"><div class="op" data-p="65">Office clean, weekly <em>£65</em></div><div class="op" data-p="40">Kitchen deep clean <em>£40</em></div><div class="op" data-p="25">Windows inside <em>£25</em></div></div>
-        <div class="tot"><span style="font-weight:700;color:#66708a">Total a visit</span><b id="tot">£0</b></div>
-        <div class="send">Send quote on WhatsApp</div><div class="sent" id="sent">Sent to the customer in 40 seconds</div>
+      <div class="tag tools"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+      <div class="app">
+        <div class="tb"><i></i><i></i><i></i><span>MAA, My Admin Assistant</span></div>
+        <div class="bd">
+          <div class="side"><b>Clients</b>
+            <div class="cl sel"><em style="background:#4b4fd8"></em>Khumalo Trading</div>
+            <div class="cl"><em style="background:#e8862a"></em>Naidoo &amp; Sons</div>
+            <div class="cl"><em style="background:#14a38b"></em>Bayview Dental</div>
+            <div class="cl"><em style="background:#4b4fd8"></em>Greenway Motors</div>
+            <div class="cl"><em style="background:#e8862a"></em>J. van Wyk</div>
+            <div class="cl"><em style="background:#14a38b"></em>Coastal Cafe</div>
+          </div>
+          <div class="main">
+            <div class="mh"><span>November deadlines</span><span class="due" id="due">0 due this week</span></div>
+            <div class="cal" id="cal"></div>
+            <div class="ft"><div><b id="mDone">0</b><span>Submitted</span></div><div><b id="mLate">0</b><span>Late</span></div><div><b>14</b><span>Clients</span></div></div>
+          </div>
+        </div>
       </div>
     </div>
+
     <div class="note">Examples only. Made up businesses.</div>
   </div>
 </div></div>
@@ -316,7 +394,7 @@ const P = [
   {q:"People lose my number", s:"A digital business card", d:"One link customers keep forever. Call, WhatsApp, quote, save your number and leave a review in one tap. Built with your logo, ready in a day, no monthly fees.", m:"Hi Chris, I'd like a digital business card for my business.", t:"cards"},
   {q:"I need more customers to call", s:"Business leads, checked by hand", d:"Owners' direct numbers, ratings and website problems for your exact trade and area. Every lead checked by a person, so you stop calling dead numbers.", m:"Hi Chris, I'm interested in business leads. Can I see a sample?", t:"leads"},
   {q:"Buyers ignore my LinkedIn", s:"A LinkedIn profile that sells", d:"We rewrite your headline, about section and banner so buyers understand what you do and why to pick you, in seconds.", m:"Hi Chris, I'd like my LinkedIn profile improved.", t:"linkedin"},
-  {q:"Admin eats my evenings", s:"A simple tool, built for you", d:"Quotes, money, clients or stock. If you do it over and over by hand, we turn it into a small tool that does it for you. Yours to keep.", m:"Hi Chris, I have a job I'd like a tool for.", t:"tools"}
+  {q:"Client deadlines keep slipping", s:"Software built around your business", d:"Small desktop and web apps made for the way you already work. Example: MAA, My Admin Assistant, puts every client deadline on one calendar and flags what is due before it is late.", m:"Hi Chris, I'd like to talk about software for my business.", t:"tools"}
 ];
 const arrow = '<svg class="ar" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 $('#problems').innerHTML = P.map((p,i)=>'<button class="prob" role="tab" aria-selected="false" data-i="'+i+'" data-t="problem_'+p.t+'"><span class="n">'+(i+1)+'</span>'+p.q+arrow+'<span class="bar"><i></i></span></button>').join('');
@@ -353,21 +431,23 @@ const SC1 = () => {
   rows.forEach((r,k)=>{ later(()=>r.classList.add('scan'), 500+k*900); later(()=>{ r.classList.remove('scan'); r.classList.add(LEADS[k][2]?'done':'dead'); r.querySelector('.ok').textContent = LEADS[k][2]?'Checked':'Removed'; $('#lcount').textContent=(k+1)+' checked'; }, 1100+k*900); });
 };
 
-// Scene 2: LinkedIn rewrite (types itself)
-const BEFORE = ['Director at SM Facilities Ltd','Experienced professional. Passionate about business. Open to opportunities.'];
-const AFTER = ['Office cleaning for Leeds firms tired of chasing their cleaners','Same team every visit, a fixed weekly price, and I answer my own phone. Message me for a free walk round.'];
-function type(el, text, speed, done){ el.textContent=''; el.classList.add('typing'); let k=0; const step=()=>{ el.textContent=text.slice(0,++k); if(k<text.length) later(step,speed); else { el.classList.remove('typing'); done&&done(); } }; later(step,speed); }
+// Scene 2: bland profile fades into a refreshed one
 const SC2 = () => {
-  const li=$('#li'); li.classList.remove('after'); $('#liHl').textContent=BEFORE[0]; $('#liAb').textContent=BEFORE[1]; $('#liV').textContent='12';
-  later(()=>{ li.classList.add('after'); type($('#liHl'),AFTER[0],28,()=>type($('#liAb'),AFTER[1],14)); }, 1200);
-  let v=12; const tick=()=>{ v+=Math.ceil((87-v)/6); $('#liV').textContent=v; if(v<87) later(tick,120); }; later(tick,4200);
+  const lw=$('#lw'); lw.classList.remove('fresh'); $('#lv').textContent='12'; $('#ls').textContent='0';
+  later(()=>lw.classList.add('fresh'), 1600);
+  const count=(el,to)=>{ let v=+el.textContent; const step=()=>{ v+=Math.max(1,Math.ceil((to-v)/7)); if(v>to)v=to; el.textContent=v; if(v<to) later(step,90); }; step(); };
+  later(()=>{ count($('#lv'),87); count($('#ls'),64); }, 3600);
 };
-
-// Scene 3: quote tool
+// Scene 3: MAA calendar
+const DAYS=['M','T','W','T','F','S','S'];
+const EVENTS={4:['vat','VAT'],7:['tax','Tax'],11:['emp','PAYE'],12:['vat','VAT'],14:['tax','Tax'],18:['emp','PAYE'],21:['vat','VAT'],25:['tax','Prov']};
 const SC3 = () => {
-  const ops=$$('#opts .op'); ops.forEach(o=>o.classList.remove('on')); $('#tot').textContent='£0'; $('#sent').classList.remove('on');
-  let tot=0; ops.forEach((o,k)=>later(()=>{ o.classList.add('on'); tot+= +o.dataset.p; $('#tot').textContent='£'+tot; }, 700+k*800));
-  later(()=>$('#sent').classList.add('on'), 3600);
+  const cal=$('#cal'); cal.innerHTML = DAYS.map(d=>'<span>'+d+'</span>').join('') + Array.from({length:28},(_,k)=>'<div class="d'+(k+1===10?' today':'')+'">'+(k+1)+(EVENTS[k+1]?'<div class="chip '+EVENTS[k+1][0]+'" data-d="'+(k+1)+'">'+EVENTS[k+1][1]+'</div>':'')+'</div>').join('');
+  $('#due').textContent='0 due this week'; $('#mDone').textContent='0'; $('#mLate').textContent='0';
+  const chips=[...cal.querySelectorAll('.chip')];
+  chips.forEach((c,k)=>later(()=>c.classList.add('on'), 400+k*260));
+  later(()=>{ $('#due').textContent='3 due this week'; }, 2700);
+  let done=0; [4,7].forEach((d,k)=>later(()=>{ const c=cal.querySelector('.chip[data-d="'+d+'"]'); c.classList.add('ok'); c.textContent='Done'; $('#mDone').textContent=++done; }, 3300+k*700));
 };
 const SCENES=[SC0,SC1,SC2,SC3];
 
