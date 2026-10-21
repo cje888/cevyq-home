@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0e2347">
+<meta name="theme-color" content="#081633">
 <title>CEVYQ Group | Real problems. Real solutions.</title>
-<meta name="description" content="CEVYQ Group builds done for you digital business cards, checked business leads, LinkedIn profiles and simple business tools for small businesses.">
+<meta name="description" content="Tell us the real problem in your business. CEVYQ Group builds the fix: digital business cards, checked business leads, LinkedIn profiles and simple business tools.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="CEVYQ Group: Real problems. Real solutions.">
-<meta property="og:description" content="Digital business cards, checked leads, LinkedIn profiles and business tools. Built for you, ready in days.">
+<meta property="og:description" content="Digital business cards, checked leads, LinkedIn profiles and business tools. Built for you.">
 <meta property="og:url" content="https://cevyq.com/">
 <meta property="og:image" content="https://cevyq.com/share.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -16,452 +16,371 @@
 <link rel="apple-touch-icon" href="cq-mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Michroma&display=swap" rel="stylesheet">
 <script src="https://cevyq-stats.chris-e41.workers.dev/t.js" data-card="cevyq-home" data-name="CEVYQ home page (cevyq.com)" defer></script>
 <style>
-:root{--navy:#0e2347;--navy2:#16336a;--blue:#2b6cc4;--sky:#4fb0e6;--orange:#f2892b;--gold:#f4bf4f;--ink:#0f1a2e;--muted:#5a6680;--paper:#ffffff;--mist:#eef4fb;--line:#dde6f2;--wa:#25d366}
+@property --g1{syntax:'<color>';inherits:true;initial-value:#2f7be0}
+@property --g2{syntax:'<color>';inherits:true;initial-value:#f28a2c}
+@property --acc{syntax:'<color>';inherits:true;initial-value:#f6c453}
+:root{--night:#081633;--navy:#0e2347;--deep:#050d22;--blue:#2f7be0;--sky:#5cc0f2;--orange:#f28a2c;--gold:#f6c453;--ink:#0d1628;--text:#e7eefb;--soft:#a9b9d6;--line:rgba(255,255,255,.12);--paper:#f5f8fd;--wa:#25d366}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:Barlow,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:17px;line-height:1.55;color:var(--ink);background:var(--paper)}
+body{font-family:Manrope,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:17px;line-height:1.6;color:var(--text);background:var(--night)}
 a{color:inherit;text-decoration:none}
-button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-align:left}
 img,svg{display:block}
-:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
-.cond{font-family:"Barlow Condensed",Barlow,sans-serif}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:8px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.display{font-family:Unbounded,Manrope,sans-serif;letter-spacing:-.02em}
+.grad{background:linear-gradient(100deg,var(--sky) 0%,#8fb6ff 35%,var(--gold) 70%,var(--orange) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 
-/* top bar */
-.bar{position:absolute;top:0;left:0;right:0;z-index:5}
-.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
-.brand{display:flex;align-items:center;gap:12px;color:#fff}
-.brand img{width:44px;height:auto}
-.brand b{font-family:Michroma,sans-serif;font-weight:400;font-size:19px;letter-spacing:4px}
-.brand small{display:block;font-size:10.5px;letter-spacing:3px;opacity:.75;margin-top:2px}
-.bar .talk{display:flex;align-items:center;gap:8px;background:var(--wa);color:#06331a;font-weight:700;font-size:15px;padding:10px 16px;border-radius:999px}
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:20;transition:background .3s,box-shadow .3s}
+.nav.solid{background:rgba(8,22,51,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:40px;height:auto}
+.brand b{font-family:Michroma,sans-serif;font-weight:400;font-size:18px;letter-spacing:5px}
+.navr{display:flex;align-items:center;gap:26px;font-weight:600;font-size:15px;color:var(--soft)}
+.navr a:hover{color:#fff}
+.pill{display:inline-flex;align-items:center;gap:9px;background:var(--wa);color:#04331a;font-weight:800;padding:11px 18px;border-radius:999px;font-size:15px}
+.pill:hover{filter:brightness(1.05)}
 
 /* hero */
-.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;isolation:isolate;padding:110px 0 70px}
-.ribbons{position:absolute;inset:0;z-index:-1;pointer-events:none}
-.ribbons i{position:absolute;display:block;height:120px;width:160%;left:-30%;transform-origin:center}
-.ribbons i:nth-child(1){top:70%;background:linear-gradient(90deg,var(--blue),var(--sky));transform:rotate(-14deg)}
-.ribbons i:nth-child(2){top:85%;height:46px;background:linear-gradient(90deg,var(--orange),var(--gold));transform:rotate(-14deg)}
-.ribbons i:nth-child(3){top:93%;height:14px;background:#fff;opacity:.85;transform:rotate(-14deg)}
-.hero .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-.hero h1{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:clamp(58px,9vw,112px);line-height:.86;text-transform:uppercase;letter-spacing:-.5px}
-.hero h1 span{display:block}
-.hero h1 span:last-child{color:var(--gold)}
-.hero p.lead{font-size:clamp(18px,2.2vw,21px);max-width:30ch;margin-top:22px;color:#dce7f7}
-.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:12px;font-weight:700;font-size:17px}
-.btn.wa{background:var(--wa);color:#06331a}
-.btn.line{border:2px solid rgba(255,255,255,.5);color:#fff}
-.btn.navy{background:var(--navy);color:#fff}
+.hero{--g1:#2f7be0;--g2:#f28a2c;--acc:#f6c453;transition:--g1 .9s,--g2 .9s,--acc .9s;position:relative;min-height:100vh;display:flex;align-items:center;padding:110px 0 70px;overflow:hidden;isolation:isolate;background:radial-gradient(120% 90% at 85% 40%,#12306a 0%,var(--night) 55%,var(--deep) 100%)}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(70% 75% at 78% 45%,color-mix(in srgb,var(--g1) 50%,transparent),transparent 72%),radial-gradient(40% 40% at 95% 90%,color-mix(in srgb,var(--g2) 22%,transparent),transparent 70%)}
+.hero[data-theme=leads]{--g1:#16a058;--g2:#b8e35a;--acc:#5fe08f}
+.hero[data-theme=linkedin]{--g1:#0a66c2;--g2:#70b5f9;--acc:#70b5f9}
+.hero[data-theme=tools]{--g1:#7c5cff;--g2:#f28a2c;--acc:#ffb057}
+.hero .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center;width:100%}
+.ask{font-size:clamp(34px,4.3vw,58px);line-height:1.04;font-weight:600}
+.problems{margin-top:26px;display:grid;gap:4px;max-width:520px}
+.prob{position:relative;display:flex;align-items:center;gap:16px;padding:13px 18px;border-radius:16px;font-size:clamp(17px,1.6vw,20px);font-weight:700;color:var(--soft);transition:color .25s,background .25s}
+.prob .n{font-family:Unbounded,sans-serif;font-size:13px;font-weight:600;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--soft);flex:none;transition:.25s}
+.prob .ar{margin-left:auto;opacity:0;transform:translateX(-6px);transition:.25s;color:var(--acc)}
+.prob:hover{color:#fff}
+.prob[aria-selected=true]{color:#fff;background:rgba(255,255,255,.06)}
+.prob[aria-selected=true] .n{background:var(--acc);border-color:var(--acc);color:var(--night)}
+.prob[aria-selected=true] .ar{opacity:1;transform:none}
+.prob .bar{position:absolute;left:18px;right:18px;bottom:6px;height:2px;border-radius:2px;background:rgba(255,255,255,.08);overflow:hidden;opacity:0}
+.prob[aria-selected=true] .bar{opacity:1}
+.prob .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--g1),var(--acc))}
+.prob[aria-selected=true] .bar i.run{animation:fill var(--dur,7s) linear forwards}
+@keyframes fill{to{width:100%}}
+.answer{margin-top:20px;max-width:520px;min-height:190px}
+.answer small{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--acc)}
+.answer small svg{flex:none}
+.answer h2{font-size:clamp(28px,3.2vw,40px);line-height:1.08;font-weight:600;margin-top:6px}
+.answer p{color:var(--soft);margin-top:10px;max-width:46ch}
+.answer .go{margin-top:20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 24px;border-radius:14px;font-weight:800;font-size:16px}
+.btn.wa{background:var(--wa);color:#04331a}
+.btn.ghost{border:1px solid var(--line);color:#fff}
+.swap{animation:rise .5s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 
-/* phone */
-.phonebox{display:flex;flex-direction:column;align-items:center;gap:14px}
-.phone{width:300px;height:610px;border-radius:44px;background:#05080f;padding:12px;box-shadow:0 40px 80px -30px rgba(0,0,0,.7),0 0 0 2px rgba(255,255,255,.08)}
-.screen{position:relative;width:100%;height:100%;border-radius:34px;overflow:hidden;background:#fff;color:var(--ink)}
-.notch{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:92px;height:24px;border-radius:14px;background:#05080f;z-index:3}
-.tabs{display:flex;gap:6px;background:var(--navy2);box-shadow:0 0 0 1px rgba(255,255,255,.1);padding:5px;border-radius:999px}
-.tabs button{padding:8px 14px;border-radius:999px;font-size:14px;font-weight:600;color:#cdd9ee}
-.tabs button[aria-selected=true]{background:#fff;color:var(--navy)}
-.hint{font-size:13.5px;color:#b9c8e2;text-align:center;max-width:30ch}
+/* stage */
+.stage{position:relative;height:640px;perspective:1200px}
+.glow{position:absolute;inset:8% 4%;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--g1) 75%,transparent),color-mix(in srgb,var(--g2) 32%,transparent) 60%,transparent 76%);filter:blur(30px);z-index:-1}
+.mark{position:absolute;left:50%;top:50%;width:min(560px,92%);transform:translate(-50%,-50%) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .6s,filter .6s;opacity:.22;filter:drop-shadow(0 30px 60px rgba(0,0,0,.5)) saturate(1.2)}
+.stage.intro .mark{opacity:1}
+.scene{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transform:translateY(16px) scale(.97);transition:opacity .55s,transform .55s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.scene.on{opacity:1;transform:none;pointer-events:auto}
 
-/* mini card inside phone */
-.mc{position:absolute;inset:0;display:flex;flex-direction:column;opacity:0;transition:opacity .45s;pointer-events:none}
-.mc.on{opacity:1;pointer-events:auto}
-.mc .van{position:relative;background:var(--c1);color:#fff;padding:44px 16px 0;overflow:hidden}
-.mc .row{display:flex;justify-content:space-between;align-items:flex-start}
-.mc .badge{width:46px;height:46px;border-radius:11px;background:var(--acc);color:var(--c1);display:grid;place-items:center}
-.mc .stamp{background:#fff;color:var(--ink);border-radius:10px;padding:5px 9px;text-align:center;transform:rotate(3deg)}
-.mc .stamp b{font-family:"Barlow Condensed",sans-serif;font-size:21px;line-height:1;display:flex;gap:3px;align-items:center;justify-content:center}
-.mc .stamp b svg{color:#f4b400}
-.mc .stamp span{display:block;font-size:9px;font-weight:600;color:var(--muted)}
-.mc h3{font-family:"Barlow Condensed",sans-serif;font-weight:800;text-transform:uppercase;font-size:37px;line-height:.88;margin-top:14px}
-.mc .tr{font-size:13px;font-weight:600;margin-top:6px;opacity:.9}.mc .tr em{font-style:normal;color:var(--acc)}
-.mc .liv{position:relative;height:40px;margin:12px -30px -14px;transform:skewY(-6deg);transform-origin:left}
-.mc .liv i{position:absolute;left:0;right:0}
-.mc .liv i:nth-child(1){top:4px;height:15px;background:var(--acc)}
-.mc .liv i:nth-child(2){top:23px;height:5px;background:#fff;opacity:.9}
-.mc .liv i:nth-child(3){top:32px;height:3px;background:var(--acc);opacity:.6}
-.mc .tel{display:flex;align-items:center;gap:9px;padding:12px 0 15px;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:27px;line-height:1}
-.mc .tel span{width:32px;height:32px;border-radius:50%;background:var(--acc);color:var(--c1);display:grid;place-items:center}
-.mc .acts{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px}
-.mc .acts button{min-height:44px;border-radius:10px;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;gap:6px}
-.mc .acts .w{background:var(--wa);color:#06331a}.mc .acts .c{background:var(--c1);color:#fff}
-.mc .acts .q{grid-column:1/-1;border:2px solid var(--c1);color:var(--c1)}
-.mc .svc{padding:4px 14px}
-.mc .svc div{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:13.5px;font-weight:600}
-.mc .svc i{width:26px;height:26px;border-radius:7px;background:var(--mist);display:grid;place-items:center;color:var(--c1)}
-.tap{position:absolute;left:50%;bottom:18px;transform:translate(-50%,20px);background:var(--ink);color:#fff;font-size:12.5px;font-weight:700;padding:8px 13px;border-radius:999px;opacity:0;transition:.25s;white-space:nowrap;z-index:4}
-.tap.on{opacity:1;transform:translate(-50%,0)}
+/* phone scene */
+.phone{width:290px;height:590px;border-radius:46px;background:#02050d;padding:11px;box-shadow:0 50px 90px -30px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.1),inset 0 0 0 2px #1b2233;transform:rotate(-4deg)}
+.screen{position:relative;height:100%;border-radius:36px;overflow:hidden;background:#fff;color:var(--ink)}
+.notch{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:90px;height:24px;border-radius:14px;background:#02050d;z-index:2}
+.ctop{background:#14244f;color:#fff;padding:48px 18px 20px}
+.ctop .row{display:flex;justify-content:space-between;align-items:center}
+.ctop .lg{width:48px;height:48px;border-radius:13px;background:#ffd23f;color:#14244f;display:grid;place-items:center}
+.ctop .st{background:#fff;color:var(--ink);border-radius:12px;padding:6px 10px;text-align:center;font-weight:800;font-size:18px;line-height:1.1}
+.ctop .st span{display:block;font-size:9.5px;font-weight:700;color:#66708a}
+.ctop h4{font-family:Unbounded,sans-serif;font-weight:600;font-size:23px;line-height:1.05;margin-top:16px}
+.ctop .tr{font-size:13px;font-weight:600;opacity:.85;margin-top:4px}
+.ctop .tel{display:flex;align-items:center;gap:10px;margin-top:16px;font-weight:800;font-size:22px}
+.ctop .tel span{width:34px;height:34px;border-radius:50%;background:#ffd23f;color:#14244f;display:grid;place-items:center}
+.cacts{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:14px}
+.cacts button{min-height:46px;border-radius:12px;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;gap:6px}
+.cacts .w{background:var(--wa);color:#04331a}.cacts .c{background:#14244f;color:#fff}
+.cacts .q{grid-column:1/-1;border:2px solid #14244f;color:#14244f}
+.clist{padding:2px 16px}
+.clist div{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #e7ecf4;font-size:13.5px;font-weight:700}
+.clist i{width:24px;height:24px;border-radius:7px;background:#eef3fb;display:grid;place-items:center;color:#14244f}
+.toast{position:absolute;left:50%;bottom:16px;transform:translate(-50%,16px);background:var(--ink);color:#fff;font-size:12.5px;font-weight:700;padding:8px 13px;border-radius:999px;opacity:0;transition:.25s;white-space:nowrap}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.floaty{position:absolute;background:#fff;color:var(--ink);border-radius:16px;padding:12px 14px;box-shadow:0 24px 50px -20px rgba(0,0,0,.6);font-size:13.5px;font-weight:700;display:flex;align-items:center;gap:10px}
+.floaty b{font-family:Unbounded,sans-serif;font-size:20px;font-weight:600}
+.floaty .d{width:10px;height:10px;border-radius:50%;background:var(--wa)}
+.f1{right:2%;top:16%;animation:bob 6s ease-in-out infinite}
+.f2{left:0;bottom:18%;animation:bob 7s ease-in-out infinite reverse}
+@keyframes bob{50%{transform:translateY(-10px)}}
+
+/* sheet scene */
+.sheet{width:min(520px,100%);background:#fff;color:var(--ink);border-radius:20px;box-shadow:0 50px 90px -30px rgba(0,0,0,.8);overflow:hidden;transform:rotate(2deg)}
+.sheet .top{display:flex;align-items:center;gap:10px;padding:12px 16px;background:#1d8a4f;color:#fff;font-weight:800;font-size:14px}
+.sheet .top span{margin-left:auto;font-weight:600;font-size:12px;opacity:.85}
+.sheet .hd{display:grid;grid-template-columns:1.6fr 1fr .8fr;gap:8px;padding:10px 16px;background:#eaf6ee;color:#1d6b3f;font-size:12px;font-weight:800}
+.lrow{display:grid;grid-template-columns:1.6fr 1fr .8fr;gap:8px;align-items:center;padding:12px 16px;border-bottom:1px solid #edf1f7;font-size:13.5px;transition:background .4s}
+.lrow b{display:block;font-weight:800}
+.lrow span{color:#66708a;font-size:12px}
+.lrow .ok{justify-self:start;font-size:11.5px;font-weight:800;padding:4px 9px;border-radius:999px;background:#eef2f8;color:#66708a;transition:.35s}
+.lrow.done .ok{background:#e3f6ea;color:#11683a}
+.lrow.dead{opacity:.45}
+.lrow.dead .ok{background:#fdecea;color:#a33}
+.lrow.scan{background:#fff8e6}
+.sheet .ft{padding:12px 16px;font-size:12.5px;color:#66708a;font-weight:700;display:flex;justify-content:space-between}
+
+/* linkedin scene */
+.li{width:min(470px,100%);background:#fff;color:var(--ink);border-radius:20px;overflow:hidden;box-shadow:0 50px 90px -30px rgba(0,0,0,.8);transform:rotate(-2deg)}
+.li .lbar{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid #e6e9ef}
+.li .lbar i{width:28px;height:28px;border-radius:5px;background:#0a66c2;color:#fff;font:700 19px Arial,sans-serif;display:grid;place-items:center;font-style:normal;padding-bottom:2px}
+.li .lbar span{flex:1;height:28px;border-radius:5px;background:#eef3f8;color:#5e6d81;font-size:12.5px;display:flex;align-items:center;padding:0 10px}
+.li .cv{height:90px;background:#c8d0dc;transition:background .6s}
+.li.after .cv{background:linear-gradient(120deg,#004182,#0a66c2 55%,#70b5f9)}
+.li .lbtns{display:flex;gap:8px;margin-top:12px}
+.li .lbtns b{padding:7px 16px;border-radius:999px;font-size:13.5px;font-weight:700}
+.li .lbtns .c{background:#0a66c2;color:#fff}.li .lbtns .m{border:1.5px solid #0a66c2;color:#0a66c2}
+.li .bd{padding:0 22px 22px}
+.li .av{width:84px;height:84px;border-radius:50%;border:5px solid #fff;margin-top:-42px;background:#9aa6b8;display:grid;place-items:center;color:#fff;font-weight:800;font-size:26px;transition:background .6s}
+.li.after .av{background:#0a66c2}
+.li .nm{font-weight:800;font-size:20px;margin-top:8px}
+.li .hl{font-size:15px;color:#33405a;margin-top:2px;min-height:46px}
+.li .ab{font-size:14px;color:#66708a;margin-top:10px;min-height:88px}
+.li .vw{margin-top:12px;display:flex;align-items:center;gap:10px;font-size:14px;color:#66708a}
+.li .vw b{font-family:Unbounded,sans-serif;font-size:24px;color:var(--ink);font-weight:600}
+.typing:after{content:"";display:inline-block;width:2px;height:1em;background:#2f7be0;margin-left:2px;vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* tool scene */
+.tool{width:min(480px,100%);background:#fff;color:var(--ink);border-radius:20px;box-shadow:0 50px 90px -30px rgba(0,0,0,.8);padding:22px;transform:rotate(1.5deg)}
+.tool h5{font-family:Unbounded,sans-serif;font-size:18px;font-weight:600}
+.tool .sub{font-size:13px;color:#66708a;margin-top:2px}
+.tool .opts{display:grid;gap:8px;margin-top:16px}
+.tool .op{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-radius:12px;border:1.5px solid #e2e8f2;font-weight:700;font-size:14.5px;transition:.3s}
+.tool .op.on{border-color:var(--orange);background:#fff5ea}
+.tool .op em{font-style:normal;color:#66708a;font-weight:600}
+.tool .tot{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:14px;border-top:2px dashed #e2e8f2}
+.tool .tot b{font-family:Unbounded,sans-serif;font-size:30px;font-weight:600}
+.tool .send{margin-top:14px;width:100%;min-height:50px;border-radius:12px;background:var(--wa);color:#04331a;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px}
+.tool .sent{text-align:center;font-weight:800;color:#11683a;margin-top:10px;opacity:0;transition:.3s}
+.tool .sent.on{opacity:1}
+
+.tag{position:absolute;left:-1%;top:3%;z-index:2;width:64px;height:64px;border-radius:18px;display:grid;place-items:center;color:#fff;box-shadow:0 20px 40px -14px rgba(0,0,0,.6);transform:rotate(-8deg);animation:bob 6s ease-in-out infinite}
+.tag.cards{background:linear-gradient(135deg,#2f7be0,#f28a2c)}
+.tag.leads{background:#1d8a4f}
+.tag.linkedin{background:#0a66c2;font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:34px;letter-spacing:-1px;padding-bottom:4px}
+.tag.tools{background:linear-gradient(135deg,#7c5cff,#f28a2c)}
+.note{position:absolute;bottom:-4px;left:0;right:0;text-align:center;font-size:12.5px;color:#7f90b0}
 
 /* sections */
-section{padding:84px 0}
-.h2{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:clamp(40px,5.5vw,62px);line-height:.95;color:var(--navy);max-width:22ch;text-wrap:balance}
-.sub{font-size:19px;color:var(--muted);max-width:52ch;margin-top:14px}
-.svcnav{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
-.svcnav button{display:flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;border:2px solid var(--line);font-weight:700;font-size:16px;color:var(--navy);background:#fff}
-.svcnav button svg{color:var(--blue)}
-.svcnav button[aria-selected=true]{background:var(--navy);border-color:var(--navy);color:#fff}
-.svcnav button[aria-selected=true] svg{color:var(--gold)}
-.panel{display:none;grid-template-columns:1fr 1fr;gap:44px;margin-top:30px;align-items:start}
-.panel.on{display:grid}
-.panel h3{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:38px;line-height:1;color:var(--navy)}
-.panel p{margin-top:12px;color:#33405a}
-.ticks{list-style:none;margin-top:18px;display:grid;gap:10px}
-.ticks li{display:flex;gap:11px;align-items:flex-start}
-.ticks li:before{content:"";flex:none;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--orange) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/14px no-repeat}
-.panel .go{margin-top:24px}
-.demo{background:var(--mist);border-radius:20px;padding:24px;min-height:330px}
-.demo .cap{font-size:14px;color:var(--muted);margin-bottom:14px;font-weight:600}
-
-/* feed demo */
-.feed{display:grid;gap:8px}
-.feed div{display:flex;align-items:center;gap:10px;background:#fff;border-radius:12px;padding:11px 13px;font-size:15px;animation:in .4s both}
-.feed time{margin-left:auto;font-size:13px;color:var(--muted)}
-.feed b{font-weight:700}
-.dot{width:10px;height:10px;border-radius:50%;flex:none}
-@keyframes in{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
-.feedsum{display:flex;gap:10px;margin-top:14px}
-.feedsum div{flex:1;background:var(--navy);color:#fff;border-radius:12px;padding:12px;text-align:center}
-.feedsum b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:32px;line-height:1}
-.feedsum span{font-size:12.5px;opacity:.8}
-
-/* lead flip */
-.lead-card{background:#fff;border-radius:16px;padding:18px;box-shadow:0 1px 0 var(--line)}
-.lead-card .nm{font-weight:700;font-size:18px}
-.lead-card .ad{font-size:14px;color:var(--muted)}
-.fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
-.fields div{background:var(--mist);border-radius:10px;padding:10px}
-.fields span{display:block;font-size:12px;color:var(--muted);font-weight:600}
-.fields b{display:block;font-size:15px;filter:blur(6px);transition:filter .5s;user-select:none}
-.revealed .fields b{filter:none}
-.checked{display:inline-flex;align-items:center;gap:6px;margin-top:14px;background:#e3f6ea;color:#11683a;font-weight:700;font-size:13.5px;padding:6px 11px;border-radius:999px;opacity:0;transition:opacity .4s .4s}
-.revealed .checked{opacity:1}
-.reveal{margin-top:14px;width:100%}
-
-/* before after */
-.switch{display:inline-flex;background:#fff;border-radius:999px;padding:4px;gap:4px;margin-bottom:14px}
-.switch button{padding:8px 16px;border-radius:999px;font-weight:700;font-size:14px;color:var(--muted)}
-.switch button[aria-pressed=true]{background:var(--navy);color:#fff}
-.li{background:#fff;border-radius:16px;overflow:hidden}
-.li .cover{height:62px;background:linear-gradient(110deg,var(--navy) 50%,var(--blue) 50% 75%,var(--orange) 75%)}
-.li.before .cover{background:#c9d1dc}
-.li .body{padding:0 16px 16px}
-.li .av{width:66px;height:66px;border-radius:50%;border:4px solid #fff;margin-top:-33px;background:#9aa6b8;display:grid;place-items:center;color:#fff;font-weight:800;font-size:22px}
-.li:not(.before) .av{background:var(--blue)}
-.li .nm{font-weight:700;font-size:18px;margin-top:6px}
-.li .hl{font-size:15px;color:#33405a;margin-top:2px}
-.li .ab{font-size:14px;color:var(--muted);margin-top:10px}
-.li .stats{display:flex;gap:16px;margin-top:12px;font-size:13.5px;color:var(--muted)}
-.li .stats b{color:var(--ink)}
-
-/* tools */
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips button{padding:10px 14px;border-radius:12px;background:#fff;border:2px solid var(--line);font-weight:700;font-size:14.5px}
-.chips button[aria-pressed=true]{border-color:var(--orange);background:#fff4e8}
-.toolout{margin-top:16px;background:#fff;border-radius:16px;padding:18px;min-height:150px}
-.toolout b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:26px;color:var(--navy);line-height:1.05}
-.toolout p{font-size:15px;color:#33405a;margin-top:8px}
-.toolout .save{display:inline-block;margin-top:10px;font-weight:700;color:#11683a;background:#e3f6ea;padding:5px 11px;border-radius:999px;font-size:13.5px}
-
-/* steps */
-.steps{background:var(--navy);color:#fff;position:relative;overflow:hidden}
-.steps .h2{color:#fff}
-.steps ol{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;counter-reset:s}
-.steps li{counter-increment:s;background:var(--navy2);border-radius:18px;padding:24px;position:relative}
-.steps li:before{content:counter(s);font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:64px;line-height:.8;color:var(--gold);display:block;margin-bottom:12px}
-.steps li b{display:block;font-size:20px}
-.steps li p{color:#c9d6ec;margin-top:6px;font-size:16px}
-
-/* contact */
-.contact{text-align:center}
-.contact .h2{margin:0 auto;max-width:18ch}
-.contact .sub{margin:14px auto 0}
-.contact .ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:30px}
-.contact .small{margin-top:22px;font-size:15px;color:var(--muted)}
-.contact .small a{font-weight:700;color:var(--blue);text-decoration:underline;text-underline-offset:3px}
-footer{border-top:1px solid var(--line);padding:26px 0 40px;font-size:14px;color:var(--muted)}
+section{padding:110px 0}
+.light{background:var(--paper);color:var(--ink)}
+.h2{font-size:clamp(32px,4.2vw,54px);line-height:1.05;font-weight:600;max-width:20ch}
+.lead{font-size:19px;color:#4a5874;margin-top:16px;max-width:54ch}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:56px;margin-top:60px}
+.trio .num{font-family:Unbounded,sans-serif;font-size:15px;font-weight:600;color:var(--blue)}
+.trio h3{font-family:Unbounded,sans-serif;font-size:22px;font-weight:600;margin-top:14px;line-height:1.2}
+.trio p{color:#4a5874;margin-top:10px}
+.trio div{border-top:2px solid var(--ink);padding-top:22px}
+.close{position:relative;overflow:hidden;text-align:center;background:radial-gradient(90% 120% at 50% 100%,#12306a 0%,var(--night) 60%,var(--deep) 100%)}
+.close .bigmark{width:120px;margin:0 auto 30px;filter:drop-shadow(0 20px 40px rgba(47,123,224,.4))}
+.close .h2{margin:0 auto;max-width:18ch}
+.close p{color:var(--soft);font-size:19px;margin:18px auto 0;max-width:46ch}
+.close .go{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:34px}
+.close .small{margin-top:24px;font-size:15px;color:var(--soft)}
+.close .small a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+footer{background:var(--deep);color:#7f90b0;font-size:14px;padding:28px 0}
 footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
-footer .brand{color:var(--navy)}
-footer .brand b{font-size:15px}
+footer .brand b{font-size:14px;color:#cfd9ec}
 
-@media (prefers-reduced-motion:no-preference){
- .ribbons i{animation:sweep 1.1s cubic-bezier(.2,.8,.2,1) both}
- .ribbons i:nth-child(2){animation-delay:.12s}.ribbons i:nth-child(3){animation-delay:.24s}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:980px){
+ .hero{min-height:auto;padding:100px 0 60px}
+ .hero .grid{grid-template-columns:1fr;gap:20px}
+ .stage{height:560px;order:3}
+ .answer{min-height:0;order:2}
+ .navr a.lnk{display:none}
+ .trio{grid-template-columns:1fr;gap:34px}
+ section{padding:80px 0}
 }
-@keyframes sweep{from{translate:-100% 0}to{translate:0 0}}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
-
-@media (max-width:900px){
- .hero{padding:96px 0 56px}
- .hero .grid{grid-template-columns:1fr}
- .panel{grid-template-columns:1fr;gap:24px}
- .steps ol{grid-template-columns:1fr}
- .ribbons i:nth-child(1){top:60%}.ribbons i:nth-child(2){top:70%}.ribbons i:nth-child(3){top:76%}
-}
-@media (max-width:420px){
+@media (max-width:440px){
  body{font-size:16.5px}
- .bar .talk span{display:none}
- .phone{width:280px;height:570px}
- .svcnav button{flex:1 1 calc(50% - 10px);justify-content:center;padding:12px 8px;font-size:15px}
- .fields{grid-template-columns:1fr}
- section{padding:64px 0}
+ .pill span{display:none}
+ .phone{width:262px;height:540px}
+ .stage{height:520px}
+ .f1{right:-4px;top:8%}.f2{left:-4px;bottom:12%}
+ .sheet .hd,.lrow{grid-template-columns:1.5fr 1fr .9fr;font-size:12.5px}
+ .scene{padding-top:40px}
+ .tag{width:48px;height:48px;border-radius:14px;top:12px;left:2px}
+ .tag svg{width:24px;height:24px}
+ .tag.linkedin{font-size:26px}
+ .f2{display:none}
+ .stage{height:580px}
 }
 </style>
 </head>
 <body>
 
-<header class="bar"><div class="wrap">
-  <a class="brand" href="#top" aria-label="CEVYQ Group home"><img src="cq-mark.png" alt=""><span><b>CEVYQ</b><small>GROUP</small></span></a>
-  <a class="talk" data-t="whatsapp" target="_blank" rel="noopener" href="https://wa.me/66631101888?text=Hi%20Chris%2C%20I%20found%20CEVYQ%20online."><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-4.7A8.5 8.5 0 1 1 20.5 11.6z"/></svg><span>WhatsApp us</span></a>
+<header class="nav" id="nav"><div class="wrap">
+  <a class="brand" href="#top" aria-label="CEVYQ Group home"><img src="cq-mark.png" alt=""><b>CEVYQ</b></a>
+  <nav class="navr"><a class="lnk" href="#how">How we work</a><a class="lnk" href="#talk">Contact</a>
+    <a class="pill" data-t="whatsapp" target="_blank" rel="noopener" href="https://wa.me/66631101888?text=Hi%20Chris%2C%20I%20found%20CEVYQ%20online."><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-4.7A8.5 8.5 0 1 1 20.5 11.6z"/></svg><span>WhatsApp</span></a></nav>
 </div></header>
 
 <main id="top">
-<div class="hero">
-  <div class="ribbons" aria-hidden="true"><i></i><i></i><i></i></div>
-  <div class="wrap grid">
-    <div>
-      <h1><span>Real problems.</span><span>Real solutions.</span></h1>
-      <p class="lead">We build the tools that bring small businesses more work. Digital business cards, checked leads, LinkedIn profiles and simple business software. Done for you.</p>
-      <div class="ctas">
-        <a class="btn wa" data-t="whatsapp" target="_blank" rel="noopener" href="https://wa.me/66631101888?text=Hi%20Chris%2C%20I%20found%20CEVYQ%20online."><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-4.7A8.5 8.5 0 1 1 20.5 11.6z"/></svg>Talk to us on WhatsApp</a>
-        <a class="btn line" href="#services">See what we do</a>
+<div class="hero"><div class="wrap grid">
+  <div>
+    <h1 class="ask display">What's the <span class="grad">real problem?</span></h1>
+    <div class="problems" role="tablist" aria-label="Pick your problem" id="problems"></div>
+    <div class="answer" id="answer" aria-live="polite"></div>
+  </div>
+  <div class="stage intro" id="stage" aria-label="The solution, live">
+    <div class="glow"></div>
+    <img class="mark" id="mark" src="cq-mark-lg.png" alt="">
+
+    <div class="scene" data-s="0">
+      <div class="tag cards"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></div>
+      <div class="phone"><div class="screen" id="screen">
+        <div class="notch"></div>
+        <div class="ctop"><div class="row"><div class="lg"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><div class="st">&#9733; 5.0<span>84 Google reviews</span></div></div>
+          <h4>Brightwire Electrical</h4><div class="tr">Electrician in Leeds</div>
+          <div class="tel"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>07700 900 112</div></div>
+        <div class="cacts"><button class="w" data-say="WhatsApp tapped" data-no-track>WhatsApp</button><button class="c" data-say="Call tapped" data-no-track>Call now</button><button class="q" data-say="Quote request started" data-no-track>Get a free quote</button></div>
+        <div class="clist"><div><i>&#10003;</i>Fault finding</div><div><i>&#10003;</i>Rewires and sockets</div><div><i>&#10003;</i>EV chargers</div><div><i>&#10003;</i>Safety certificates</div></div>
+        <div class="toast" id="toast"></div>
+      </div></div>
+      <div class="floaty f1"><span class="d"></span><span>Call tapped<br><span style="color:#66708a;font-weight:600">Leeds, just now</span></span></div>
+      <div class="floaty f2"><b id="opens">27</b><span>opens<br>this week</span></div>
+    </div>
+
+    <div class="scene" data-s="1">
+      <div class="tag leads"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M3 14h18M9 4v16"/></svg></div>
+      <div class="sheet"><div class="top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 4v16"/></svg>Your leads<span>Checked by hand</span></div>
+        <div class="hd"><span>Business</span><span>Mobile</span><span>Check</span></div>
+        <div id="lrows"></div>
+        <div class="ft"><span>Roofers, Manchester</span><span id="lcount">0 checked</span></div>
       </div>
     </div>
-    <div class="phonebox">
-      <div class="tabs" role="tablist" aria-label="Example cards">
-        <button role="tab" aria-selected="true" data-card="0">Electrician</button>
-        <button role="tab" aria-selected="false" data-card="1">Mechanic</button>
-        <button role="tab" aria-selected="false" data-card="2">Plumber</button>
-      </div>
-      <div class="phone"><div class="screen" id="screen"><div class="notch"></div><div class="tap" id="tap" role="status"></div></div></div>
-      <p class="hint">A real digital card. Tap the buttons. Every tap is counted for the owner.</p>
-    </div>
-  </div>
-</div>
 
-<section id="services"><div class="wrap">
-  <h2 class="h2">What we build for you</h2>
-  <p class="sub">Four things, done properly. Pick one to see it work.</p>
-  <div class="svcnav" role="tablist" aria-label="Services">
-    <button role="tab" aria-selected="true" data-p="cards"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>Digital cards</button>
-    <button role="tab" aria-selected="false" data-p="leads"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg>Business leads</button>
-    <button role="tab" aria-selected="false" data-p="li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3.5"/><path d="M8 10.5V17M8 7.3v.2M12 17v-6.5M12 13.5a2.5 2.5 0 0 1 5 0V17"/></svg>LinkedIn profiles</button>
-    <button role="tab" aria-selected="false" data-p="tools"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.3 5.3L3.5 17.5l3 3 5.9-5.9a4 4 0 0 0 5.3-5.3l-2.5 2.5-2.6-.4-.4-2.6z"/></svg>Business tools</button>
-  </div>
+    <div class="scene" data-s="2">
+      <div class="tag linkedin">in</div>
+      <div class="li" id="li"><div class="lbar"><i>in</i><span>Search</span></div><div class="cv"></div><div class="bd">
+        <div class="av">SM</div><div class="nm">Sarah Mitchell</div>
+        <div class="hl" id="liHl"></div><div class="ab" id="liAb"></div>
+        <div class="lbtns"><b class="c">Connect</b><b class="m">Message</b></div>
+        <div class="vw"><b id="liV">12</b>profile views this week</div>
+      </div></div>
+    </div>
 
-  <div class="panel on" id="p-cards" role="tabpanel">
-    <div>
-      <h3>Your business card, on every phone</h3>
-      <p>One link your customers keep. They call, WhatsApp, ask for a quote, save your number or leave a Google review in one tap. No app, no monthly fees.</p>
-      <ul class="ticks">
-        <li>Built with your logo, colours and real services</li>
-        <li>Ready to share within a day</li>
-        <li>A QR code for your van, invoices and flyers</li>
-        <li>A monthly report of who tapped what</li>
-      </ul>
-      <a class="btn navy go" data-t="cards_ask" target="_blank" rel="noopener" href="https://wa.me/66631101888?text=Hi%20Chris%2C%20I%27d%20like%20a%20digital%20card%20for%20my%20business.">Get my card made</a>
-    </div>
-    <div class="demo">
-      <div class="cap">What a card owner sees (example)</div>
-      <div class="feed" id="feed"></div>
-      <div class="feedsum"><div><b id="fOpen">0</b><span>Card opens</span></div><div><b id="fEnq">0</b><span>Calls and messages</span></div><div><b id="fRev">0</b><span>Review taps</span></div></div>
-    </div>
-  </div>
-
-  <div class="panel" id="p-leads" role="tabpanel">
-    <div>
-      <h3>Leads checked by a person, not a robot</h3>
-      <p>Most lead lists are full of dead numbers and closed businesses. Ours are built for your exact trade and area, then checked by hand before you get them.</p>
-      <ul class="ticks">
-        <li>Owner names and direct mobile numbers where we can find them</li>
-        <li>Google rating, reviews and website problems</li>
-        <li>Only open, trading businesses</li>
-        <li>Delivered as a clean spreadsheet</li>
-      </ul>
-      <a class="btn navy go" data-t="leads_ask" target="_blank" rel="noopener" href="https://wa.me/66631101888?text=Hi%20Chris%2C%20I%27m%20interested%20in%20business%20leads.">Ask for a free sample</a>
-    </div>
-    <div class="demo">
-      <div class="cap">A sample lead (made up business)</div>
-      <div class="lead-card" id="leadCard">
-        <div class="nm">Northgate Roofing Ltd</div>
-        <div class="ad">Roofer in Manchester, UK</div>
-        <div class="fields">
-          <div><span>Owner</span><b>Daniel Hartley</b></div>
-          <div><span>Direct mobile</span><b>07700 900 418</b></div>
-          <div><span>Google rating</span><b>4.9 from 112 reviews</b></div>
-          <div><span>Website</span><b>No mobile version</b></div>
-        </div>
-        <span class="checked"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Checked by hand</span>
-      </div>
-      <button class="btn navy reveal" id="reveal" data-t="lead_reveal">Show what you get</button>
-    </div>
-  </div>
-
-  <div class="panel" id="p-li" role="tabpanel">
-    <div>
-      <h3>A LinkedIn profile that brings in work</h3>
-      <p>Buyers check you out before they reply. We rewrite your headline, about section and banner so they understand what you do and why to pick you, in seconds.</p>
-      <ul class="ticks">
-        <li>A clear headline that says who you help</li>
-        <li>An about section written in your voice</li>
-        <li>A matching banner and a tidy profile</li>
-      </ul>
-      <a class="btn navy go" data-t="li_ask" target="_blank" rel="noopener" href="https://wa.me/66631101888?text=Hi%20Chris%2C%20I%27d%20like%20my%20LinkedIn%20profile%20improved.">Fix my profile</a>
-    </div>
-    <div class="demo">
-      <div class="cap">Example profile</div>
-      <div class="switch" role="group" aria-label="Before or after"><button aria-pressed="true" data-v="before">Before</button><button aria-pressed="false" data-v="after">After</button></div>
-      <div class="li before" id="li">
-        <div class="cover"></div>
-        <div class="body">
-          <div class="av">SM</div>
-          <div class="nm">Sarah Mitchell</div>
-          <div class="hl" id="liHl">Director at SM Facilities Ltd</div>
-          <div class="ab" id="liAb">Experienced professional. Passionate about business. Open to opportunities.</div>
-          <div class="stats"><span><b id="liV">12</b> profile views this week</span></div>
-        </div>
+    <div class="scene" data-s="3">
+      <div class="tag tools"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.3 5.3L3.5 17.5l3 3 5.9-5.9a4 4 0 0 0 5.3-5.3l-2.5 2.5-2.6-.4-.4-2.6z"/></svg></div>
+      <div class="tool"><h5>Quick quote</h5><div class="sub">Built for a cleaning company. Example.</div>
+        <div class="opts" id="opts"><div class="op" data-p="65">Office clean, weekly <em>£65</em></div><div class="op" data-p="40">Kitchen deep clean <em>£40</em></div><div class="op" data-p="25">Windows inside <em>£25</em></div></div>
+        <div class="tot"><span style="font-weight:700;color:#66708a">Total a visit</span><b id="tot">£0</b></div>
+        <div class="send">Send quote on WhatsApp</div><div class="sent" id="sent">Sent to the customer in 40 seconds</div>
       </div>
     </div>
+    <div class="note">Examples only. Made up businesses.</div>
   </div>
+</div></div>
 
-  <div class="panel" id="p-tools" role="tabpanel">
-    <div>
-      <h3>Simple tools that give you your evenings back</h3>
-      <p>If you do the same job over and over in a notebook or spreadsheet, we can turn it into a small tool that does it for you. Built for how you already work.</p>
-      <ul class="ticks">
-        <li>Made for your business, not a big generic system</li>
-        <li>Works on your laptop or phone</li>
-        <li>Yours to keep, no ongoing licence</li>
-      </ul>
-      <a class="btn navy go" data-t="tools_ask" target="_blank" rel="noopener" href="https://wa.me/66631101888?text=Hi%20Chris%2C%20I%20have%20a%20job%20I%27d%20like%20a%20tool%20for.">Tell us what slows you down</a>
-    </div>
-    <div class="demo">
-      <div class="cap">What eats your time?</div>
-      <div class="chips" id="chips">
-        <button aria-pressed="true" data-k="quotes">Writing quotes</button>
-        <button aria-pressed="false" data-k="money">Tracking money</button>
-        <button aria-pressed="false" data-k="admin">Client admin</button>
-        <button aria-pressed="false" data-k="stock">Stock and suppliers</button>
-      </div>
-      <div class="toolout" id="toolout"></div>
-    </div>
+<section class="light" id="how"><div class="wrap">
+  <h2 class="h2 display">One person to message. The whole job done for you.</h2>
+  <p class="lead">No agency runaround and no software to learn. You tell us what's going wrong, we build the fix with your real details, and you only pay once you've seen it.</p>
+  <div class="trio">
+    <div><span class="num">01</span><h3>Message us on WhatsApp</h3><p>Tell us the problem in your own words. Two minutes, no forms.</p></div>
+    <div><span class="num">02</span><h3>See it before you pay</h3><p>We build it with your logo, colours and details, and show you the finished thing first.</p></div>
+    <div><span class="num">03</span><h3>Use it from day one</h3><p>Share it, use it, ask for changes whenever you need them. We stay one message away.</p></div>
   </div>
 </div></section>
 
-<section class="steps"><div class="wrap">
-  <h2 class="h2">How it works</h2>
-  <ol>
-    <li><b>Message us on WhatsApp</b><p>Tell us about your business and what you need. No forms, no sales call marathon.</p></li>
-    <li><b>We build it for you</b><p>We use your real details, logo and colours. You see it before you pay a cent.</p></li>
-    <li><b>You start using it</b><p>Share it, use it, and ask for changes any time. We stay a message away.</p></li>
-  </ol>
-</div></section>
-
-<section class="contact" id="contact"><div class="wrap">
-  <h2 class="h2">Got a problem worth solving?</h2>
-  <p class="sub">Tell us what is costing you time or customers. We will tell you honestly if we can fix it.</p>
-  <div class="ctas">
-    <a class="btn wa" data-t="whatsapp" target="_blank" rel="noopener" href="https://wa.me/66631101888?text=Hi%20Chris%2C%20I%20found%20CEVYQ%20online."><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-4.7A8.5 8.5 0 1 1 20.5 11.6z"/></svg>WhatsApp Chris</a>
-    <a class="btn navy" href="mailto:chris@cevyq.com"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>chris@cevyq.com</a>
+<section class="close" id="talk"><div class="wrap">
+  <img class="bigmark" src="cq-mark-lg.png" alt="">
+  <h2 class="h2 display">Tell us the <span class="grad">real problem.</span></h2>
+  <p>If we can fix it, we will tell you how and what it costs. If we can't, we'll say so.</p>
+  <div class="go">
+    <a class="btn wa" data-t="whatsapp" target="_blank" rel="noopener" href="https://wa.me/66631101888?text=Hi%20Chris%2C%20I%20found%20CEVYQ%20online."><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-4.7A8.5 8.5 0 1 1 20.5 11.6z"/></svg>WhatsApp Chris</a>
+    <a class="btn ghost" href="mailto:chris@cevyq.com">chris@cevyq.com</a>
   </div>
-  <p class="small">Want our details on your phone? <a href="https://card.cevyq.com" target="_blank" rel="noopener">Open our digital card</a></p>
+  <p class="small">Want us on your phone? <a href="https://card.cevyq.com" target="_blank" rel="noopener">Open our digital card</a></p>
 </div></section>
 </main>
 
-<footer><div class="wrap">
-  <span class="brand"><img src="cq-mark.png" alt="" width="30"><b style="font-family:Michroma,sans-serif;font-weight:400;letter-spacing:3px">CEVYQ</b></span>
-  <span>CEVYQ Group, Business &amp; Technology Solutions</span>
-</div></footer>
+<footer><div class="wrap"><span class="brand"><img src="cq-mark.png" alt="" style="width:28px"><b>CEVYQ</b></span><span>CEVYQ Group, Business &amp; Technology Solutions</span></div></footer>
 
 <script>
 const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
-const I = {
-  phone:'<path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/>',
-  wa:'<path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-4.7A8.5 8.5 0 1 1 20.5 11.6z"/>',
-  bolt:'<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',
-  wrench:'<path d="M14.7 6.3a4 4 0 0 0-5.3 5.3L3.5 17.5l3 3 5.9-5.9a4 4 0 0 0 5.3-5.3l-2.5 2.5-2.6-.4-.4-2.6z"/>',
-  drop:'<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>',
-  star:'<path fill="currentColor" d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>',
-  check:'<path d="M5 12.5l4.5 4.5L19 7.5"/>'
-};
-const sv = (n,s=18,w=2.2) => '<svg width="'+s+'" height="'+s+'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="'+w+'" stroke-linecap="round" stroke-linejoin="round">'+I[n]+'</svg>';
-
-// Example cards: made up businesses
-const CARDS = [
-  {n:'Brightwire Electrical', t:'Electrician', c:'Leeds', tel:'07700 900 112', r:'5.0', rv:'84', ic:'bolt', c1:'#13224a', acc:'#ffd23f', s:['Fault finding','Rewires and new sockets','EV chargers','Safety certificates']},
-  {n:'Torque Mobile Mechanics', t:'Mobile mechanic', c:'Bristol', tel:'07700 900 457', r:'4.9', rv:'131', ic:'wrench', c1:'#2a1414', acc:'#ff5a36', s:['Servicing at your door','Brakes and clutches','Diagnostics','MOT prep']},
-  {n:'Harbour Plumbing', t:'Plumber', c:'Sydney', tel:'0491 570 156', r:'5.0', rv:'57', ic:'drop', c1:'#0c2e33', acc:'#2fd1c5', s:['Blocked drains','Hot water systems','Leak detection','Bathroom installs']}
+const WA = t => 'https://wa.me/66631101888?text=' + encodeURIComponent(t);
+const P = [
+  {q:"People lose my number", s:"A digital business card", d:"One link customers keep forever. Call, WhatsApp, quote, save your number and leave a review in one tap. Built with your logo, ready in a day, no monthly fees.", m:"Hi Chris, I'd like a digital business card for my business.", t:"cards"},
+  {q:"I need more customers to call", s:"Business leads, checked by hand", d:"Owners' direct numbers, ratings and website problems for your exact trade and area. Every lead checked by a person, so you stop calling dead numbers.", m:"Hi Chris, I'm interested in business leads. Can I see a sample?", t:"leads"},
+  {q:"Buyers ignore my LinkedIn", s:"A LinkedIn profile that sells", d:"We rewrite your headline, about section and banner so buyers understand what you do and why to pick you, in seconds.", m:"Hi Chris, I'd like my LinkedIn profile improved.", t:"linkedin"},
+  {q:"Admin eats my evenings", s:"A simple tool, built for you", d:"Quotes, money, clients or stock. If you do it over and over by hand, we turn it into a small tool that does it for you. Yours to keep.", m:"Hi Chris, I have a job I'd like a tool for.", t:"tools"}
 ];
-const screen = $('#screen');
-CARDS.forEach((d,i) => {
-  const el = document.createElement('div'); el.className = 'mc'+(i===0?' on':''); el.style.setProperty('--c1',d.c1); el.style.setProperty('--acc',d.acc);
-  el.innerHTML = '<div class="van"><div class="row"><div class="badge">'+sv(d.ic,24,2.4)+'</div><div class="stamp"><b>'+sv('star',14,1)+d.r+'</b><span>'+d.rv+' Google reviews</span></div></div>'+
-    '<h3>'+d.n+'</h3><div class="tr">'+d.t+' in <em>'+d.c+'</em></div><div class="liv"><i></i><i></i><i></i></div>'+
-    '<div class="tel"><span>'+sv('phone',16,2.4)+'</span>'+d.tel+'</div></div>'+
-    '<div class="acts"><button class="w" data-say="WhatsApp tapped">'+sv('wa',16)+'WhatsApp</button><button class="c" data-say="Call tapped">'+sv('phone',15)+'Call now</button><button class="q" data-say="Quote request started">Get a free quote</button></div>'+
-    '<div class="svc">'+d.s.map(x=>'<div><i>'+sv('check',14,3)+'</i>'+x+'</div>').join('')+'</div>';
-  screen.appendChild(el);
-});
-let cur = 0, timer = null, tapT = null;
-const show = i => { cur = i; $$('.mc').forEach((m,k)=>m.classList.toggle('on',k===i)); $$('.tabs button').forEach((b,k)=>b.setAttribute('aria-selected',k===i)); };
-const auto = () => { clearInterval(timer); timer = setInterval(()=>show((cur+1)%CARDS.length), 4500); };
-$$('.tabs button').forEach(b => b.onclick = () => { show(+b.dataset.card); auto(); });
-screen.addEventListener('click', e => {
-  const b = e.target.closest('[data-say]'); if (!b) return;
-  const t = $('#tap'); t.textContent = '✓ '+b.dataset.say+'. Counted for the owner'; t.classList.add('on');
-  clearTimeout(tapT); tapT = setTimeout(()=>t.classList.remove('on'), 1800); auto();
-});
-auto();
+const arrow = '<svg class="ar" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+$('#problems').innerHTML = P.map((p,i)=>'<button class="prob" role="tab" aria-selected="false" data-i="'+i+'" data-t="problem_'+p.t+'"><span class="n">'+(i+1)+'</span>'+p.q+arrow+'<span class="bar"><i></i></span></button>').join('');
 
-// Service switcher
-$$('.svcnav button').forEach(b => b.onclick = () => {
-  $$('.svcnav button').forEach(x=>x.setAttribute('aria-selected', x===b));
-  $$('.panel').forEach(p=>p.classList.toggle('on', p.id==='p-'+b.dataset.p));
-});
+const DUR = 7000; let cur = -1, timer = null, manual = false, sceneTimers = [];
+const clearScene = () => { sceneTimers.forEach(clearTimeout); sceneTimers = []; };
+const later = (f,ms) => sceneTimers.push(setTimeout(f,ms));
 
-// Card activity feed (sample)
-const EV = [['Card opened','#8fa3c4'],['WhatsApp tapped','#25d366'],['Call tapped','#2b6cc4'],['Saved your number','#f2892b'],['Card opened','#8fa3c4'],['Review us on Google tapped','#f4b400'],['Quote request sent','#25d366'],['Card opened','#8fa3c4'],['Directions tapped','#2b6cc4']];
-const PLACE = ['Leeds','Bradford','Wakefield','Harrogate','York'];
-let ei = 0, cnt = {o:0,e:0,r:0};
-const feed = $('#feed');
-const pushEv = () => {
-  const [txt,col] = EV[ei % EV.length]; ei++;
-  if (/opened/.test(txt)) cnt.o++; else if (/Review/.test(txt)) cnt.r++; else if (/WhatsApp|Call|Quote/.test(txt)) cnt.e++;
-  const d = document.createElement('div');
-  d.innerHTML = '<span class="dot" style="background:'+col+'"></span><b>'+txt+'</b><span style="color:var(--muted);font-size:14px">'+PLACE[ei%PLACE.length]+'</span><time>just now</time>';
-  feed.prepend(d); [...feed.children].slice(5).forEach(x=>x.remove());
-  [...feed.children].slice(1).forEach((x,k)=>x.querySelector('time').textContent=(k+1)*7+' min ago');
-  $('#fOpen').textContent = 23+cnt.o; $('#fEnq').textContent = 6+cnt.e; $('#fRev').textContent = 2+cnt.r;
+function pick(i, byUser){
+  cur = i; clearScene();
+  $('#stage').classList.remove('intro');
+  document.querySelector('.hero').dataset.theme = P[i].t;
+  $$('.prob').forEach((b,k)=>{ b.setAttribute('aria-selected', k===i); const bar=b.querySelector('.bar i'); bar.classList.remove('run'); void bar.offsetWidth; if(k===i && !manual) bar.classList.add('run'); });
+  $$('.scene').forEach(s=>s.classList.toggle('on', +s.dataset.s===i));
+  const p = P[i];
+  $('#answer').innerHTML = '<div class="swap"><small>Real solution</small><h2 class="display">'+p.s+'</h2><p>'+p.d+'</p><div class="go"><a class="btn wa" data-t="whatsapp_'+p.t+'" target="_blank" rel="noopener" href="'+WA(p.m)+'"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-4.7A8.5 8.5 0 1 1 20.5 11.6z"/></svg>Solve this on WhatsApp</a></div></div>';
+  SCENES[i]();
+  clearTimeout(timer);
+  if (!manual) timer = setTimeout(()=>pick((i+1)%P.length,false), DUR);
+}
+$('#problems').addEventListener('click', e => { const b = e.target.closest('.prob'); if (!b) return; manual = true; clearTimeout(timer); pick(+b.dataset.i, true); });
+
+// Scene 0: card taps
+let opens = 27, toastT;
+const SC0 = () => { later(()=>{ $('#opens').textContent = ++opens; }, 2200); };
+$('#screen').addEventListener('click', e => { const b = e.target.closest('[data-say]'); if(!b) return; const t=$('#toast'); t.textContent='✓ '+b.dataset.say+'. Counted for the owner'; t.classList.add('on'); clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove('on'),1800); });
+
+// Scene 1: leads being checked
+const LEADS = [['Northgate Roofing','07700 900 418',1],['Hale Roof Repairs','07700 900 233',1],['Peak Slate & Tile','Closed down',0],['Ardwick Roofing Co','07700 900 671',1],['Salford Flat Roofs','07700 900 905',1]];
+const SC1 = () => {
+  $('#lrows').innerHTML = LEADS.map(l=>'<div class="lrow"><div><b>'+l[0]+'</b><span>Manchester</span></div><div>'+l[1]+'</div><span class="ok">Waiting</span></div>').join('');
+  $('#lcount').textContent = '0 checked';
+  const rows = $$('#lrows .lrow');
+  rows.forEach((r,k)=>{ later(()=>r.classList.add('scan'), 500+k*900); later(()=>{ r.classList.remove('scan'); r.classList.add(LEADS[k][2]?'done':'dead'); r.querySelector('.ok').textContent = LEADS[k][2]?'Checked':'Removed'; $('#lcount').textContent=(k+1)+' checked'; }, 1100+k*900); });
 };
-for (let k=0;k<4;k++) pushEv();
-setInterval(()=>{ if ($('#p-cards').classList.contains('on') && document.visibilityState==='visible') pushEv(); }, 2600);
 
-// Lead reveal
-$('#reveal').onclick = () => { const c = $('#leadCard'); const on = !c.classList.contains('revealed'); c.classList.toggle('revealed', on); $('#reveal').textContent = on ? 'Hide details' : 'Show what you get'; };
-
-// LinkedIn before and after
-const LI = {
-  before:{hl:'Director at SM Facilities Ltd', ab:'Experienced professional. Passionate about business. Open to opportunities.', v:12},
-  after:{hl:'Office cleaning for Leeds firms that are tired of chasing their cleaners', ab:'Twelve years keeping offices spotless across West Yorkshire. Fixed weekly price, the same team every visit, and I answer my own phone. Message me for a free walk round.', v:87}
+// Scene 2: LinkedIn rewrite (types itself)
+const BEFORE = ['Director at SM Facilities Ltd','Experienced professional. Passionate about business. Open to opportunities.'];
+const AFTER = ['Office cleaning for Leeds firms tired of chasing their cleaners','Same team every visit, a fixed weekly price, and I answer my own phone. Message me for a free walk round.'];
+function type(el, text, speed, done){ el.textContent=''; el.classList.add('typing'); let k=0; const step=()=>{ el.textContent=text.slice(0,++k); if(k<text.length) later(step,speed); else { el.classList.remove('typing'); done&&done(); } }; later(step,speed); }
+const SC2 = () => {
+  const li=$('#li'); li.classList.remove('after'); $('#liHl').textContent=BEFORE[0]; $('#liAb').textContent=BEFORE[1]; $('#liV').textContent='12';
+  later(()=>{ li.classList.add('after'); type($('#liHl'),AFTER[0],28,()=>type($('#liAb'),AFTER[1],14)); }, 1200);
+  let v=12; const tick=()=>{ v+=Math.ceil((87-v)/6); $('#liV').textContent=v; if(v<87) later(tick,120); }; later(tick,4200);
 };
-$$('.switch button').forEach(b => b.onclick = () => {
-  const v = b.dataset.v; $$('.switch button').forEach(x=>x.setAttribute('aria-pressed', x===b));
-  $('#li').classList.toggle('before', v==='before'); $('#liHl').textContent = LI[v].hl; $('#liAb').textContent = LI[v].ab; $('#liV').textContent = LI[v].v;
-});
 
-// Tools
-const TOOLS = {
-  quotes:['A quote builder','Pick the job, the size and the extras. It works out the price and sends a neat quote to the customer on WhatsApp or email.','Quotes in minutes, not evenings'],
-  money:['A money tracker','Every payment in and out, in every currency you use, with what you are owed and what you owe on one screen.','No more month end panic'],
-  admin:['A client admin desk','Client details, documents and deadlines in one place, with reminders before anything is due.','Nothing slips through the cracks'],
-  stock:['A stock and supplier list','What you have, what is running low and who to order from, with prices you can compare at a glance.','Order once, not three times']
+// Scene 3: quote tool
+const SC3 = () => {
+  const ops=$$('#opts .op'); ops.forEach(o=>o.classList.remove('on')); $('#tot').textContent='£0'; $('#sent').classList.remove('on');
+  let tot=0; ops.forEach((o,k)=>later(()=>{ o.classList.add('on'); tot+= +o.dataset.p; $('#tot').textContent='£'+tot; }, 700+k*800));
+  later(()=>$('#sent').classList.add('on'), 3600);
 };
-const tool = k => { const [t,p,s] = TOOLS[k]; $('#toolout').innerHTML = '<b>'+t+'</b><p>'+p+'</p><span class="save">'+s+'</span>'; };
-$$('#chips button').forEach(b => b.onclick = () => { $$('#chips button').forEach(x=>x.setAttribute('aria-pressed', x===b)); tool(b.dataset.k); });
-tool('quotes');
+const SCENES=[SC0,SC1,SC2,SC3];
+
+// Mark tilts with the pointer
+const stage=$('#stage'), mark=$('#mark');
+if (matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion:reduce)').matches) {
+  window.addEventListener('pointermove', e => { const r=stage.getBoundingClientRect(); const x=(e.clientX-(r.left+r.width/2))/r.width, y=(e.clientY-(r.top+r.height/2))/r.height; mark.style.setProperty('--ry',(x*18).toFixed(2)+'deg'); mark.style.setProperty('--rx',(-y*14).toFixed(2)+'deg'); });
+}
+// Nav background after scrolling
+const nav=$('#nav'); const onScroll=()=>nav.classList.toggle('solid', scrollY>30); addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+// Opening moment: the mark on its own, then the first problem
+setTimeout(()=>{ if(cur<0) pick(0,false); }, 1400);
 </script>
 </body>
 </html>
