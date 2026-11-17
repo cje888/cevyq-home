@@ -558,7 +558,7 @@ footer .brand b{font-size:14px;color:#cfd9ec}
   </div>
 </div></div>
 
-<div class="strip" aria-hidden="true"><div class="marq" id="marq"><span>You see it before you pay</span><span>Built with your logo and colours</span><span>Cards ready in a day</span><span>No monthly fees on cards</span><span>One real person on WhatsApp</span><span>UK, US, Australia, NZ, South Africa, Thailand</span></div></div>
+<div class="strip" aria-hidden="true"><div class="marq" id="marq"><span>You see it before you pay</span><span>Built with your logo and colours</span><span>Cards ready in a day</span><span>No monthly fees on cards</span><span>One real person on WhatsApp</span><span>UK, US, Australia, South Africa, Thailand</span></div></div>
 
 <section class="light try" id="try"><div class="wrap">
   <span class="eyebrow rv">Try it now</span>
@@ -720,7 +720,7 @@ footer .brand b{font-size:14px;color:#cfd9ec}
     <details><summary>How fast is it?<i>+</i></summary><p>Cards are usually ready in a day. For landing pages and software we agree a date with you before any work starts.</p></details>
     <details><summary>What do landing pages, software and lead lists cost?<i>+</i></summary><p>Every business is different, so we ask a few quick questions on WhatsApp and then give you a fixed price before any work starts. No surprises.</p></details>
     <details><summary>Where do the leads come from?<i>+</i></summary><p>Public business listings for your trade and area. A person then checks every lead, and dead numbers and closed businesses are removed before you get the list.</p></details>
-    <details><summary>Which countries do you work in?<i>+</i></summary><p>The UK, the US, Australia, New Zealand, South Africa and Thailand. Prices are shown in your own currency.</p></details>
+    <details><summary>Which countries do you work in?<i>+</i></summary><p>The UK, the US, Australia, South Africa and Thailand. Prices are shown in your own currency.</p></details>
     <details><summary>Who will I be dealing with?<i>+</i></summary><p>Chris, the founder. One person on WhatsApp from the first message to the finished job.</p></details>
   </div>
 </div></section>
@@ -829,13 +829,12 @@ if (fine && !calm) {
 }
 
 /* ---------- Country prices (cards) ---------- */
-const PRICES = {UK:['£60','United Kingdom'],US:['US$75','United States'],AU:['A$110','Australia'],NZ:['NZ$120','New Zealand'],SA:['R1500','South Africa'],TH:['฿2250','Thailand']};
+const PRICES = {UK:['£65','United Kingdom'],US:['US$85','United States'],AU:['A$120','Australia'],SA:['R1650','South Africa'],TH:['฿1850','Thailand']};
 let country = 'US';
 try {
   const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
   if (/^Europe\/(London|Belfast)|^Europe\/Guernsey|^Europe\/Jersey|^Europe\/Isle_of_Man/.test(tz)) country='UK';
-  else if (/^Australia\//.test(tz)) country='AU';
-  else if (/^Pacific\/(Auckland|Chatham)/.test(tz)) country='NZ';
+  else if (/^Australia\/|^Pacific\/(Auckland|Chatham)/.test(tz)) country='AU';
   else if (/^Africa\/Johannesburg/.test(tz)) country='SA';
   else if (/^Asia\/(Bangkok)/.test(tz)) country='TH';
 } catch(e) {}
